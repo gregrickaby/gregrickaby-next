@@ -38,7 +38,6 @@ const Footer = () => (
         .social-icons a:last-child {
           margin-right: 0;
         }
-
       `}
     </style>
   </footer>
