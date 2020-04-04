@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from 'next/head'
 
 const Header = () => (
   <>
@@ -13,12 +13,8 @@ const Header = () => (
       <img src="logo.png" alt="Greg Rickaby Development logo" />
       <h1 className="site-title">Greg Rickaby</h1>
       <p className="site-description">
-        Director of Engineering
-        {' '}
-        <a href="https://webdevstudios.com">@WebDevStudios</a>
-        {' '}
-        / Author & Editor
-        {' '}
+        Director of Engineering{' '}
+        <a href="https://webdevstudios.com">@WebDevStudios</a> / Author & Editor{' '}
         <a href="https://www.wiley.com/en-us">@Wiley</a>
       </p>
 
@@ -39,6 +35,6 @@ const Header = () => (
       </style>
     </header>
   </>
-);
+)
 
-export default Header;
+export default Header

@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import Header from './header';
-import Footer from './footer';
+import PropTypes from 'prop-types'
+import Header from './header'
+import Footer from './footer'
 
-const Layout = ({ children }) => (
+const Layout = ({children}) => (
   <div className="container">
     <Header />
     <main>{children}</main>
@@ -58,14 +58,14 @@ const Layout = ({ children }) => (
       `}
     </style>
   </div>
-);
+)
 
 Layout.propTypes = {
-  children: PropTypes.string,
-};
+  children: PropTypes.string
+}
 
 Layout.defaultProps = {
-  children: 'Hello',
-};
+  children: 'Hello'
+}
 
-export default Layout;
+export default Layout
