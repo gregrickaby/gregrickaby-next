@@ -117,6 +117,7 @@ const Home = () => (
           line-height: 1.4;
           margin: 0 auto;
           max-width: 680px;
+          overflow: hidden;
           padding: 24px;
         }
 
