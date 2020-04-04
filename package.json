@@ -2,6 +2,9 @@
   "name": "gregrickaby-next",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -17,39 +20,41 @@
     "react-icons": "^3.9.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-mdx": "^1.6.8",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^3.0.0"
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "prettier": "^2.0.2"
   },
   "eslintConfig": {
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 9,
+      "sourceType": "module"
+    },
     "env": {
-      "browser": true,
+      "node": true,
       "es6": true
     },
-    "parser": "babel-eslint",
     "extends": [
       "eslint:recommended",
       "plugin:react/recommended",
-      "airbnb"
+      "prettier"
     ],
     "settings": {
       "react": {
         "version": "detect"
       }
     },
-    "parserOptions": {
-      "ecmaFeatures": {
-        "jsx": true
-      },
-      "ecmaVersion": 2018,
-      "sourceType": "module"
-    },
     "plugins": [
-      "react"
+      "react",
+      "prettier"
     ],
     "rules": {
       "react/react-in-jsx-scope": "off",
@@ -61,7 +66,25 @@
             ".jsx"
           ]
         }
-      ]
-    }
+      ],
+      "prettier/prettier": "error"
+    },
+    "overrides": [
+      {
+        "files": ".mdx",
+        "extends": [
+          "plugin:mdx/recommended",
+          "plugin:mdx/overrides"
+        ]
+      }
+    ]
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "semi": false,
+    "trailingComma": "none"
   }
 }
