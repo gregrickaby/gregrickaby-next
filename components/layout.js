@@ -61,11 +61,11 @@ const Layout = ({children}) => (
 )
 
 Layout.propTypes = {
-  children: PropTypes.string
+  children: PropTypes.array
 }
 
 Layout.defaultProps = {
-  children: 'Hello'
+  children: ''
 }
 
 export default Layout
