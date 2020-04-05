@@ -1,10 +1,27 @@
-# My Website
+## My website
 
-https://gregrickaby-next.now.sh/
+👉🏻 https://gregrickaby-next.now.sh/
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app) and hosted on [Now](https://zeit.co/).
 
-## Getting Started
+## Table of Contents
+
+- [My website](https://gregrickaby-next.now.sh/)
+- [Features](#features)
+- [Development](#development)
+  - [Getting Started](#getting-started)
+  - [Image Optimization](#image-optimization)
+  - [Linting and Code Formatting](#linting-and-code-formatting)
+
+## Features
+
+- Perfect 100 scores on Lighthouse
+- Automatic linting and code formating via ESLint and Prettier
+- [Next Optimized Images](https://github.com/cyrilwanner/next-optimized-images)
+
+## Development
+
+### Getting Started
 
 First, run the development server:
 
@@ -14,19 +31,18 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Image Optimization
 
-## Learn More
+This website uses [Next Optimized Images](https://github.com/cyrilwanner/next-optimized-images) to automatically scale and smush images. The following example would auto-optimize (via Mozjpeg) and resize `foo-photo.jpg` to `640px`.
 
-To learn more about Next.js, take a look at the following resources:
+```js
+<img
+  alt="foo photo"
+  className="photo full-width"
+  src={require('../public/images/foo-photo.jpg?resize&size=640')}
+/>
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Linting and Code Formatting
 
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on ZEIT Now
-
-The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Make sure you have both the ESLint and Prettier extensions installed in your favorite code editor. That's pretty much it!
