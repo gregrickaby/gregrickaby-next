@@ -15,7 +15,7 @@ module.exports = withOptimizedImages([
         quality: 80
       },
       optipng: {
-        optimizationLevel: 3
+        optimizationLevel: 2
       },
       svgo: {},
       webp: {
