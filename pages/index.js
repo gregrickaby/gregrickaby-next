@@ -2,7 +2,10 @@ import Layout from '../components/layout'
 
 const Index = () => (
   <Layout>
-    <img src="/rickaby-family-fall-2019.jpg" alt="Our family" />
+    <img
+      className="photo full-width"
+      src={require('../public/images/rickaby-family-fall-2019.jpg?resize&size=728')}
+    />
     <p>
       Hello! I’m the Director of Engineering at{' '}
       <a href="https://webdevstudios.com/">WebDevStudios</a> , where{' '}
