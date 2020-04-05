@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 const Index = () => (
   <Layout>
     <img
+      className="photo full-width"
       src={require('../public/images/rickaby-family-fall-2019.jpg?resize&size=642')}
     />
     <p>
