@@ -9,6 +9,7 @@ const Post = (props) => (
     <h1
       dangerouslySetInnerHTML={createDangerousMarkup(props.data.title.rendered)}
     />
+    <time>Published on {props.data.date}</time>
     <p
       dangerouslySetInnerHTML={createDangerousMarkup(
         props.data.content.rendered
