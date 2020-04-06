@@ -1,5 +1,7 @@
 import Layout from '../../components/layout'
 import fetch from 'isomorphic-unfetch'
+import Link from 'next/link'
+import {FaArrowAltCircleLeft} from 'react-icons/fa'
 import createDangerousMarkup from '../../helpers/dangerous'
 
 const Post = (props) => (
@@ -12,6 +14,10 @@ const Post = (props) => (
         props.data.content.rendered
       )}
     />
+    <FaArrowAltCircleLeft size="16px" />{' '}
+    <Link href="/">
+      <a>Back home</a>
+    </Link>
   </Layout>
 )
 
