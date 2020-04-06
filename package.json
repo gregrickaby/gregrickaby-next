@@ -28,7 +28,7 @@
     "imagemin-svgo": "^7.1.0",
     "install": "^0.13.0",
     "next-optimized-images": "^2.5.7",
-    "prettier": "^2.0.2",
+    "prettier": "^2.0.4",
     "prop-types": "^15.7.2",
     "react-icons": "^3.9.0",
     "responsive-loader": "^1.2.0",
