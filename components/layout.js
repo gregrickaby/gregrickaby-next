@@ -55,6 +55,17 @@ const Layout = ({children}) => (
           position: relative;
           width: calc(100% + 96px);
         }
+
+        pre,
+        code {
+          background-color: #eaeaea;
+          font-family: monospace;
+          font-size: 14px;
+          padding: 8px;
+          overflow: auto;
+          vertical-align: middle;
+          line-height: 1.4;
+        }
       `}
     </style>
   </div>
