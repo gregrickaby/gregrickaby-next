@@ -68,7 +68,7 @@ const Index = ({posts}) => (
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
-            <Link href="/p/[id]" as={`/p/${post.id}`}>
+            <Link href="/blog/[id]" as={`/blog/${post.id}`}>
               <a dangerouslySetInnerHTML={{__html: post.title.rendered}} />
             </Link>
           </li>
