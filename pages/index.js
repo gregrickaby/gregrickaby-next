@@ -1,7 +1,6 @@
 import Layout from '../components/layout'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
-import createDangerousMarkup from '../helpers/dangerous'
 
 const Index = (props) => (
   <Layout>
@@ -68,11 +67,7 @@ const Index = (props) => (
         {props.posts.map((post) => (
           <li key={post.id}>
             <Link href="/p/[id]" as={`/p/${post.id}`}>
-              <a
-                dangerouslySetInnerHTML={createDangerousMarkup(
-                  post.title.rendered
-                )}
-              />
+              <a dangerouslySetInnerHTML={{__html: post.title.rendered}} />
             </Link>
           </li>
         ))}
