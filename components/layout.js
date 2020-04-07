@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types'
-import Header from './header'
 import Footer from './footer'
+import Header from './header'
+import PropTypes from 'prop-types'
 
 const Layout = ({children}) => (
   <div className="container">
