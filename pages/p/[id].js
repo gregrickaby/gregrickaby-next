@@ -1,22 +1,23 @@
-import Layout from '../../components/layout'
-import fetch from 'isomorphic-unfetch'
-import Link from 'next/link'
-import {FaArrowAltCircleLeft} from 'react-icons/fa'
 import Date from '../../components/date'
+import Layout from '../../components/layout'
+import Link from 'next/link'
+import PropTypes from 'prop-types'
+import fetch from 'isomorphic-unfetch'
+import {FaArrowAltCircleLeft} from 'react-icons/fa'
 
-const Post = (post) => {
+const Post = ({post}) => {
   return (
     <Layout>
       <h1
         className="post-title"
-        dangerouslySetInnerHTML={{__html: post.post.title.rendered}}
+        dangerouslySetInnerHTML={{__html: post.title.rendered}}
       />
       <span className="post-date">
-        Posted on <Date dateString={post.post.date} />
+        Posted on <Date dateString={post.date} />
       </span>
       <p
         className="post-content"
-        dangerouslySetInnerHTML={{__html: post.post.content.rendered}}
+        dangerouslySetInnerHTML={{__html: post.content.rendered}}
       />
       <FaArrowAltCircleLeft size="16px" />{' '}
       <Link href="/">
@@ -47,6 +48,14 @@ export async function getServerSideProps(context) {
       post
     }
   }
+}
+
+Post.propTypes = {
+  post: PropTypes.array
+}
+
+Post.defaultProps = {
+  post: []
 }
 
 export default Post
