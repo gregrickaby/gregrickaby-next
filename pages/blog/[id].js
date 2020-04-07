@@ -51,7 +51,7 @@ export async function getServerSideProps(context) {
 }
 
 Post.propTypes = {
-  post: PropTypes.array
+  post: PropTypes.object
 }
 
 Post.defaultProps = {
