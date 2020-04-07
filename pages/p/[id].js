@@ -4,19 +4,19 @@ import Link from 'next/link'
 import {FaArrowAltCircleLeft} from 'react-icons/fa'
 import Date from '../../components/date'
 
-const Post = (props) => {
+const Post = (post) => {
   return (
     <Layout>
       <h1
         className="post-title"
-        dangerouslySetInnerHTML={{__html: props.data.title.rendered}}
+        dangerouslySetInnerHTML={{__html: post.post.title.rendered}}
       />
       <span className="post-date">
-        Posted on <Date dateString={props.data.date} />
+        Posted on <Date dateString={post.post.date} />
       </span>
       <p
         className="post-content"
-        dangerouslySetInnerHTML={{__html: props.data.content.rendered}}
+        dangerouslySetInnerHTML={{__html: post.post.content.rendered}}
       />
       <FaArrowAltCircleLeft size="16px" />{' '}
       <Link href="/">
@@ -37,13 +37,15 @@ const Post = (props) => {
   )
 }
 
-Post.getInitialProps = async function (context) {
+export async function getServerSideProps(context) {
   const {id} = context.query
   const res = await fetch(`https://gregrickaby.com/wp-json/wp/v2/posts/${id}`)
-  const data = await res.json()
+  const post = await res.json()
 
   return {
-    data
+    props: {
+      post
+    }
   }
 }
 
