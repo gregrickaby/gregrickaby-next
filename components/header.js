@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 const Header = () => (
   <>
@@ -10,10 +11,14 @@ const Header = () => (
     </Head>
 
     <header>
-      <img
-        src={require('../public/images/grd-logo.png?resize&size=100')}
-        alt="greg rickaby development logo"
-      />
+      <Link href="/">
+        <a>
+          <img
+            src={require('../public/images/grd-logo.png?resize&size=100')}
+            alt="greg rickaby development logo"
+          />
+        </a>
+      </Link>
       <h1 className="site-title">Greg Rickaby</h1>
       <p className="site-description">
         Director of Engineering{' '}

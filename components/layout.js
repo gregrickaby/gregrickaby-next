@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types'
-import Header from './header'
 import Footer from './footer'
+import Header from './header'
+import PropTypes from 'prop-types'
 
 const Layout = ({children}) => (
   <div className="container">
@@ -54,6 +54,17 @@ const Layout = ({children}) => (
           left: -48px;
           position: relative;
           width: calc(100% + 96px);
+        }
+
+        pre,
+        code {
+          background-color: #eaeaea;
+          font-family: monospace;
+          font-size: 14px;
+          padding: 8px;
+          overflow: auto;
+          vertical-align: middle;
+          line-height: 1.4;
         }
       `}
     </style>

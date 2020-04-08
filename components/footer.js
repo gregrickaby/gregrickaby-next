@@ -15,7 +15,8 @@ const Footer = () => (
     </div>
 
     <div>
-      Powered by <a href="https://nextjs.org">Next.JS</a>
+      Powered by <a href="https://nextjs.org">Next.JS</a> and hosted on{' '}
+      <a href="https://zeit.co/">Now</a>.
     </div>
 
     <style jsx>
