@@ -39,7 +39,7 @@ const Post = ({post}) => {
 }
 
 export async function getServerSideProps(context) {
-  const {id} = context.query
+  const id = context.query.all[0]
   const res = await fetch(`https://gregrickaby.com/wp-json/wp/v2/posts/${id}`)
   const post = await res.json()
 
