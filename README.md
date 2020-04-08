@@ -17,7 +17,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - Perfect 100 scores on Lighthouse
 - Automatic linting and code formating via ESLint and Prettier
-- [Next Optimized Images](https://github.com/cyrilwanner/next-optimized-images)
+- [Next Optimized Images](https://github.com/cyrilwanner/next-optimized-images) for pages
+- Using [data fetching](https://nextjs.org/docs/basic-features/data-fetching), Next.js will grab, route, and server-side render (SSR) posts from my [WordPress blog](https://gregrickaby.com/blog/)
 
 ## Development
 
