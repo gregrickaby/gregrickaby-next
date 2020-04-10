@@ -1,27 +1,13 @@
-// next.config.js
-const withOptimizedImages = require('next-optimized-images')
-module.exports = withOptimizedImages([
-  [
-    // https://github.com/cyrilwanner/next-optimized-images
-    withOptimizedImages,
-    {
-      inlineImageLimit: 8192,
-      imagesFolder: 'images',
-      imagesName: '[name]-[hash].[ext]',
-      handleImages: ['jpeg', 'png', 'svg', 'webp'],
-      optimizeImages: true,
-      optimizeImagesInDev: true,
-      mozjpeg: {
-        quality: 80
-      },
-      optipng: {
-        optimizationLevel: 2
-      },
-      svgo: {},
-      webp: {
-        preset: 'default',
-        quality: 75
-      }
-    }
-  ]
-])
+// https://github.com/zeit/next.js/tree/canary/packages/next-mdx
+const images = require('remark-images')
+const emoji = require('remark-emoji')
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [images, emoji]
+  }
+})
+
+module.exports = withMDX({
+  pageExtensions: ['js', 'jsx', 'mdx']
+})
