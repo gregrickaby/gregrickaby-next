@@ -13,10 +13,7 @@ const Header = () => (
     <header>
       <Link href="/">
         <a>
-          <img
-            src={require('../public/images/grd-logo.png?resize&size=100')}
-            alt="greg rickaby development logo"
-          />
+          <img src="images/grd-logo.png" alt="greg rickaby development logo" />
         </a>
       </Link>
       <h1 className="site-title">Greg Rickaby</h1>
