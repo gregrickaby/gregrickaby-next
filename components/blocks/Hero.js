@@ -35,7 +35,7 @@ Hero.defaultProps = {
 }
 
 Hero.propTypes = {
-  image: PropTypes.string,
+  image: PropTypes.object,
   title: PropTypes.string,
   text: PropTypes.string,
   buttonUrl: PropTypes.string,
