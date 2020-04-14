@@ -6,7 +6,7 @@ module.exports = withOptimizedImages([
     withOptimizedImages,
     {
       inlineImageLimit: 8192,
-      imagesFolder: 'images',
+      imagesFolder: '',
       imagesName: '[name]-[hash].[ext]',
       handleImages: ['jpeg', 'png', 'svg', 'webp'],
       optimizeImages: true,
