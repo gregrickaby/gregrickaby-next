@@ -2,11 +2,12 @@ import Layout from '../components/common/Layout'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 import fetch from 'isomorphic-unfetch'
+import Hero from '../components/blocks/Hero'
 
 const Homepage = ({posts}) => (
   <Layout>
-    <section className="container">
-      <img src={require('../public/images/wdscamp.jpg?resize&size=728')} />
+    <section>
+      <Hero image={require('../public/images/wdscamp.jpg?resize&size=728')} />
       <aside className="latest-posts">
         <h3>Latest from the blog</h3>
         <ul>
