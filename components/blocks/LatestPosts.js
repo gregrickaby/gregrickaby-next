@@ -14,7 +14,7 @@ const LatestPosts = ({posts}) => (
           <Link href="/blog/[...all]" as={`/blog/${post.id}/${post.slug}`}>
             <a>
               <Card
-                thumbnail="https://picsum.photos/300/150"
+                thumbnail={require('../../public/384x192.png')}
                 title={post.title.rendered}
                 text={post.excerpt.rendered}
               />
