@@ -7,21 +7,24 @@ import {FaArrowAltCircleLeft} from 'react-icons/fa'
 
 const Post = ({post}) => (
   <Layout>
-    <h1
-      className="post-title"
-      dangerouslySetInnerHTML={{__html: post.title.rendered}}
-    />
-    <span className="post-date">
-      Posted on <PostDate dateString={post.date} />
-    </span>
-    <p
-      className="post-content"
-      dangerouslySetInnerHTML={{__html: post.content.rendered}}
-    />
-    <FaArrowAltCircleLeft size="16px" />{' '}
-    <Link href="/">
-      <a>Back home</a>
-    </Link>
+    <article className="container mx-auto p-4">
+      <h1
+        className="text-3xl font-bold mb-4"
+        dangerouslySetInnerHTML={{__html: post.title.rendered}}
+      />
+      <span className="text-sm italic">
+        Posted on <PostDate dateString={post.date} />
+      </span>
+      <div
+        className="my-4 font-normal"
+        dangerouslySetInnerHTML={{__html: post.content.rendered}}
+      />
+      <Link href="/">
+        <a className="flex">
+          <FaArrowAltCircleLeft size="18px" className="mr-2" /> Go Back
+        </a>
+      </Link>
+    </article>
   </Layout>
 )
 
