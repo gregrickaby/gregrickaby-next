@@ -2,11 +2,11 @@ import Link from 'next/link'
 import {FaArrowRight} from 'react-icons/fa'
 
 const links = [
-  {href: '/solutions', label: 'Solutions'},
-  {href: '/services', label: 'Services'},
-  {href: '/portfolio', label: 'Portfolio'},
-  {href: '/about', label: 'About'},
-  {href: '/blog', label: 'Blog'}
+  {href: '/', label: 'Solutions'},
+  {href: '/', label: 'Services'},
+  {href: '/', label: 'Portfolio'},
+  {href: '/', label: 'About'},
+  {href: '/', label: 'Blog'}
 ]
 
 const Menu = () => (
@@ -39,7 +39,7 @@ const Menu = () => (
         </ul>
       </div>
 
-      <Link href="/contact">
+      <Link href="/">
         <a>
           <button className="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">
             <span className="mr-1">Contact Us</span>
