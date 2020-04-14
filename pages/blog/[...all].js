@@ -1,42 +1,35 @@
-import Date from '../../components/date'
-import Layout from '../../components/layout'
+import PostDate from '../../components/blog/PostDate'
+import Layout from '../../components/common/Layout'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 import fetch from 'isomorphic-unfetch'
 import {FaArrowAltCircleLeft} from 'react-icons/fa'
 
-const Post = ({post}) => {
-  return (
-    <Layout>
+const Post = ({post}) => (
+  <Layout>
+    <article
+      className="max-w-3xl mx-auto p-4 text-lg"
+      style={{fontFamily: 'Libre Franklin,sans-serif'}}
+    >
       <h1
-        className="post-title"
+        className="text-4xl font-bold mb-4"
         dangerouslySetInnerHTML={{__html: post.title.rendered}}
       />
-      <span className="post-date">
-        Posted on <Date dateString={post.date} />
+      <span className="text-sm italic">
+        Posted on <PostDate dateString={post.date} />
       </span>
-      <p
-        className="post-content"
+      <div
+        className="post my-4 font-normal"
         dangerouslySetInnerHTML={{__html: post.content.rendered}}
       />
-      <FaArrowAltCircleLeft size="16px" />{' '}
       <Link href="/">
-        <a>Back home</a>
+        <a className="flex">
+          <FaArrowAltCircleLeft size="18px" className="mr-2" /> Go Back
+        </a>
       </Link>
-      <style jsx>{`
-        .post-title {
-          font-size: 48px;
-          line-height: 1.1;
-        }
-
-        .post-date {
-          font-size: 15px;
-          font-style: italic;
-        }
-      `}</style>
-    </Layout>
-  )
-}
+    </article>
+  </Layout>
+)
 
 export async function getServerSideProps(context) {
   const id = context.query.all[0]

@@ -1,29 +1,66 @@
-import Layout from '../components/layout'
-import Link from 'next/link'
+import Button from '../components/common/Buttons'
+import Hero from '../components/blocks/Hero'
+import Layout from '../components/common/Layout'
+import LatestPosts from '../components/blocks/LatestPosts'
 import PropTypes from 'prop-types'
+import TwoColumn from '../components/blocks/TwoColumn'
 import fetch from 'isomorphic-unfetch'
 
-const Index = ({posts}) => (
+const Homepage = ({posts}) => (
   <Layout>
-    <section className="content">
-      <img
-        className="photo full-width"
-        src={require('../public/images/wdscamp.jpg?resize&size=728')}
+    <div>
+      <Hero
+        image={require('../public/wdscamp.jpg?resize&size=1920')}
+        title="Your Success Is Our Mission"
+        text="WebDevStudios provides end-to-end WordPress opportunities from strategy and planning to website design and development."
+        buttonText="Get Started Today"
       />
-    </section>
-
-    <aside className="latest-posts">
-      <h3>Latest from the blog</h3>
-      <ul>
-        {posts.map((post) => (
-          <li key={post.id}>
-            <Link href="/blog/[...all]" as={`/blog/${post.id}/${post.slug}`}>
-              <a dangerouslySetInnerHTML={{__html: post.title.rendered}} />
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </aside>
+      <TwoColumn
+        column1={<img src={require('../public/640x480.png')} />}
+        column2={
+          <>
+            <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mb-4">
+              This is column number 1
+            </h2>
+            <p className="leading-relaxed mb-8">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ex quo,
+              id quod omnes expetunt, beate vivendi ratio inveniri et comparari
+              potest. Immo videri fortasse. Sed haec ab Antiocho, familiari
+              nostro, dicuntur multo melius et fortius, quam a Stasea
+              dicebantur. Sed quanta sit alias, nunc tantum possitne esse tanta.
+              Quaero igitur, quo modo hae tantae commendationes a natura
+              profectae subito a sapientia relictae sint. Duo Reges: constructio
+              interrete. Unum est sine dolore esse, alterum cum voluptate. Sed
+              haec quidem liberius ab eo dicuntur et saepius.{' '}
+            </p>
+            <Button text="Learn More" url="/" />
+          </>
+        }
+      />
+      <TwoColumn
+        column1={
+          <>
+            <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mb-4">
+              This is column number 2
+            </h2>
+            <p className="leading-relaxed mb-8">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ex quo,
+              id quod omnes expetunt, beate vivendi ratio inveniri et comparari
+              potest. Immo videri fortasse. Sed haec ab Antiocho, familiari
+              nostro, dicuntur multo melius et fortius, quam a Stasea
+              dicebantur. Sed quanta sit alias, nunc tantum possitne esse tanta.
+              Quaero igitur, quo modo hae tantae commendationes a natura
+              profectae subito a sapientia relictae sint. Duo Reges: constructio
+              interrete. Unum est sine dolore esse, alterum cum voluptate. Sed
+              haec quidem liberius ab eo dicuntur et saepius.{' '}
+            </p>
+            <Button text="Learn More" url="/" />
+          </>
+        }
+        column2={<img src={require('../public/640x480.png')} />}
+      />
+      <LatestPosts posts={posts} />
+    </div>
   </Layout>
 )
 
@@ -38,12 +75,12 @@ export async function getStaticProps() {
   }
 }
 
-Index.propTypes = {
+Homepage.propTypes = {
   posts: PropTypes.array
 }
 
-Index.defaultProps = {
+Homepage.defaultProps = {
   posts: []
 }
 
-export default Index
+export default Homepage

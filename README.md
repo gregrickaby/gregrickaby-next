@@ -10,6 +10,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - [Features](#features)
 - [Development](#development)
   - [Getting Started](#getting-started)
+  - [TailwindCSS](#tailwindcss)
   - [Image Optimization](#image-optimization)
   - [Linting and Code Formatting](#linting-and-code-formatting)
 
@@ -19,6 +20,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Automatic linting and code formating via ESLint and Prettier
 - [Next Optimized Images](https://github.com/cyrilwanner/next-optimized-images) for pages
 - Using [data fetching](https://nextjs.org/docs/basic-features/data-fetching), Next.js will grab, route, and server-side render (SSR) posts from a [WordPress blog](https://webdevstudios.com/blog/)
+- [TailwindCSS](https://tailwindcss.com/) for styles
 
 ## Development
 
@@ -31,6 +33,10 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### TailwindCSS
+
+Please see the Tailwind [documentation](https://tailwindcss.com/docs/) to reference all the CSS classes. Unused CSS is [purged](https://tailwindcss.com/docs/controlling-file-size#removing-unused-css) with [Purgecss](https://www.purgecss.com/), and [postcss-preset-env](https://preset-env.cssdb.org/) handles adding stage 2+ support with autoprefixing.
 
 ### Image Optimization
 
