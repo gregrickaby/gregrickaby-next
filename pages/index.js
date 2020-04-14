@@ -1,15 +1,20 @@
 import Button from '../components/common/Buttons'
 import Hero from '../components/blocks/Hero'
 import Layout from '../components/common/Layout'
-import Link from 'next/link'
+import LatestPosts from '../components/blocks/LatestPosts'
 import PropTypes from 'prop-types'
 import TwoColumn from '../components/blocks/TwoColumn'
 import fetch from 'isomorphic-unfetch'
 
 const Homepage = ({posts}) => (
   <Layout>
-    <section>
-      <Hero image={require('../public/wdscamp.jpg?resize&size=1920')} />
+    <div>
+      <Hero
+        image={require('../public/wdscamp.jpg?resize&size=1920')}
+        title="Your Success Is Our Mission"
+        text="WebDevStudios provides end-to-end WordPress opportunities from strategy and planning to website design and development."
+        buttonText="Get Started Today"
+      />
       <TwoColumn
         column1={<img src={require('../public/640x480.png')} />}
         column2={
@@ -54,19 +59,8 @@ const Homepage = ({posts}) => (
         }
         column2={<img src={require('../public/640x480.png')} />}
       />
-      <aside className="latest-posts">
-        <h3>Latest from the blog</h3>
-        <ul>
-          {posts.map((post) => (
-            <li key={post.id}>
-              <Link href="/blog/[...all]" as={`/blog/${post.id}/${post.slug}`}>
-                <a dangerouslySetInnerHTML={{__html: post.title.rendered}} />
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </aside>
-    </section>
+      <LatestPosts posts={posts} />
+    </div>
   </Layout>
 )
 
