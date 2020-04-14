@@ -15,29 +15,13 @@ const Header = () => (
       <Link href="/">
         <a>
           <img
-            src={require('../public/images/wds-logo.svg')}
+            src={require('../../public/images/wds-logo.svg')}
             alt="webdevstudios logo"
           />
         </a>
       </Link>
       <h1 className="site-title">WebDevStudios</h1>
       <p className="site-description">Your Success Is Our Mission.</p>
-
-      <style jsx>
-        {`
-          header {
-            text-align: center;
-          }
-
-          img {
-            width: 96px;
-          }
-
-          .site-description {
-            font-size: 16px;
-          }
-        `}
-      </style>
     </header>
   </>
 )

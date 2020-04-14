@@ -1,42 +1,29 @@
-import Date from '../../components/date'
-import Layout from '../../components/layout'
+import PostDate from '../../components/blog/PostDate'
+import Layout from '../../components/common/Layout'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 import fetch from 'isomorphic-unfetch'
 import {FaArrowAltCircleLeft} from 'react-icons/fa'
 
-const Post = ({post}) => {
-  return (
-    <Layout>
-      <h1
-        className="post-title"
-        dangerouslySetInnerHTML={{__html: post.title.rendered}}
-      />
-      <span className="post-date">
-        Posted on <Date dateString={post.date} />
-      </span>
-      <p
-        className="post-content"
-        dangerouslySetInnerHTML={{__html: post.content.rendered}}
-      />
-      <FaArrowAltCircleLeft size="16px" />{' '}
-      <Link href="/">
-        <a>Back home</a>
-      </Link>
-      <style jsx>{`
-        .post-title {
-          font-size: 48px;
-          line-height: 1.1;
-        }
-
-        .post-date {
-          font-size: 15px;
-          font-style: italic;
-        }
-      `}</style>
-    </Layout>
-  )
-}
+const Post = ({post}) => (
+  <Layout>
+    <h1
+      className="post-title"
+      dangerouslySetInnerHTML={{__html: post.title.rendered}}
+    />
+    <span className="post-date">
+      Posted on <PostDate dateString={post.date} />
+    </span>
+    <p
+      className="post-content"
+      dangerouslySetInnerHTML={{__html: post.content.rendered}}
+    />
+    <FaArrowAltCircleLeft size="16px" />{' '}
+    <Link href="/">
+      <a>Back home</a>
+    </Link>
+  </Layout>
+)
 
 export async function getServerSideProps(context) {
   const id = context.query.all[0]

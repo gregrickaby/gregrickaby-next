@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types'
 import {parseISO, format} from 'date-fns'
 
-const Date = ({dateString}) => {
+const PostDate = ({dateString}) => {
   const date = parseISO(dateString)
   return <time dateTime={dateString}>{format(date, 'LLLL	d, yyyy')}</time>
 }
 
-Date.propTypes = {
+PostDate.propTypes = {
   dateString: PropTypes.string
 }
 
-Date.defaultProps = {
+PostDate.defaultProps = {
   dateString: ''
 }
 
-export default Date
+export default PostDate

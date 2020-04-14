@@ -18,32 +18,6 @@ const Footer = () => (
       Powered by <a href="https://nextjs.org">Next.JS</a> and hosted on{' '}
       <a href="https://zeit.co/">Now</a>.
     </div>
-
-    <style jsx>
-      {`
-        footer {
-          align-items: center;
-          border-top: 1px solid #111;
-          display: flex;
-          flex-direction: column;
-          font-size: 14px;
-          padding-top: 48px;
-          margin-top: 24px;
-        }
-
-        .social-icons {
-          margin-bottom: 24px;
-        }
-
-        .social-icons a {
-          margin-right: 24px;
-        }
-
-        .social-icons a:last-child {
-          margin-right: 0;
-        }
-      `}
-    </style>
   </footer>
 )
 
