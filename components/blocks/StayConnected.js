@@ -6,7 +6,7 @@ import {
 } from 'react-icons/fa'
 
 const StayConnected = () => (
-  <section className="bg-black">
+  <section style={{backgroundColor: '#3f4040'}}>
     <div className="container p-12 m-auto">
       <h2 className="sm:text-3xl text-2xl font-medium text-center title-font mb-8 text-white">
         Stay Connected
