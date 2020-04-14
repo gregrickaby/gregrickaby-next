@@ -2,6 +2,8 @@
 
 👉🏻 https://nextjs-wordpress-indol.now.sh/
 
+💻 View on [CodeSandbox](https://codesandbox.io/s/github/gregrickaby/nextjs-wordpress)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app) and hosted on [Now](https://zeit.co/).
 
 ## Table of Contents
