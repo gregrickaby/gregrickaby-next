@@ -1,6 +1,7 @@
-import PostDate from '../../components/blog/PostDate'
+import Hero from '../../components/blocks/Hero'
 import Layout from '../../components/common/Layout'
 import Link from 'next/link'
+import PostDate from '../../components/blog/PostDate'
 import PropTypes from 'prop-types'
 import fetch from 'isomorphic-unfetch'
 import {FaArrowAltCircleLeft} from 'react-icons/fa'
@@ -33,7 +34,9 @@ const Post = ({post}) => (
 
 export async function getServerSideProps(context) {
   const id = context.query.all[0]
-  const res = await fetch(`https://webdevstudios.com/wp-json/wp/v2/posts/${id}`)
+  const res = await fetch(
+    `https://webdevstudios.com/wp-json/wp/v2/posts/${id}?_embed`
+  )
   const post = await res.json()
 
   return {

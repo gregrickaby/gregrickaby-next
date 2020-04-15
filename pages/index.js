@@ -65,7 +65,9 @@ const Homepage = ({posts}) => (
 )
 
 export async function getStaticProps() {
-  const res = await fetch('https://webdevstudios.com/wp-json/wp/v2/posts')
+  const res = await fetch(
+    'https://webdevstudios.com/wp-json/wp/v2/posts?_embed'
+  )
   const posts = await res.json()
 
   return {
