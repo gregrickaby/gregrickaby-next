@@ -1,4 +1,3 @@
-import Hero from '../../components/blocks/Hero'
 import Layout from '../../components/common/Layout'
 import Link from 'next/link'
 import PostDate from '../../components/blog/PostDate'
