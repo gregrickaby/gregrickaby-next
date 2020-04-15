@@ -14,7 +14,7 @@ const LatestPosts = ({posts}) => (
           <Link href="/blog/[...all]" as={`/blog/${post.id}/${post.slug}`}>
             <a>
               <Card
-                thumbnail={require('../../public/384x192.png')}
+                thumbnail={post.acf.blog_hero_image.url}
                 title={post.title.rendered}
                 text={post.excerpt.rendered}
               />
