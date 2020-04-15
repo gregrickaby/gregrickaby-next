@@ -17,6 +17,7 @@ const LatestPosts = ({posts}) => (
                 thumbnail={post.acf.blog_hero_image.url}
                 title={post.title.rendered}
                 text={post.excerpt.rendered}
+                terms={post._embedded['wp:term']}
               />
             </a>
           </Link>
