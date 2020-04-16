@@ -20,14 +20,16 @@ const Post = ({post}) => {
           dangerouslySetInnerHTML={{__html: post.title.rendered}}
         />
         <span className="text-sm italic">
-          Posted on <PostDate dateString={post.date} />
+          Posted on <PostDate dateString={post.date} /> in
+          <Categories terms={post.categories} />
         </span>
-        <Categories terms={post.categories} />
         <div
           className="post my-4 font-normal"
           dangerouslySetInnerHTML={{__html: post.content.rendered}}
         />
-        <Tags terms={post.tags} />
+        <div className="border-b border-t py-4 my-12">
+          Tagged in <Tags terms={post.tags} />
+        </div>
         <Link href="/">
           <a className="flex">
             <FaArrowAltCircleLeft size="18px" className="mr-2" /> Go Back
