@@ -6,7 +6,6 @@ const Categories = ({terms}) => {
 
   return (
     <>
-      in
       {categories.map((category) => (
         <span key={category}> {category} </span>
       ))}
