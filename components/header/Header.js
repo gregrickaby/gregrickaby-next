@@ -1,12 +1,13 @@
-import Head from 'next/head'
-import Menu from './Menu'
-import Logo from '../common/Logo'
 import AlertBar from './AlertBar'
+import Head from 'next/head'
+import Logo from '../common/Logo'
+import Menu from './Menu'
+import config from '../../lib/config'
 
 const Header = () => (
   <>
     <Head>
-      <title>WebDevStudios</title>
+      <title>{config.siteName}</title>
       <link rel="icon" href="/favicon.ico" />
       <meta charSet="utf-8" />
       <meta name="robots" content="noindex" />
