@@ -6,7 +6,7 @@ const Card = ({post}) => (
     <img
       className="w-full"
       src={post.acf.blog_hero_image.url}
-      alt="Sunset in the mountains"
+      alt={post.acf.blog_hero_image.title}
     />
     <div className="px-6 py-4">
       <h1
