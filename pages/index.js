@@ -1,9 +1,10 @@
 import Button from '../components/common/Buttons'
 import Hero from '../components/blocks/Hero'
-import Layout from '../components/common/Layout'
 import LatestPosts from '../components/blocks/LatestPosts'
+import Layout from '../components/common/Layout'
 import PropTypes from 'prop-types'
 import TwoColumn from '../components/blocks/TwoColumn'
+import config from '../lib/config'
 import fetch from 'isomorphic-unfetch'
 
 const Homepage = ({posts}) => (
@@ -65,9 +66,7 @@ const Homepage = ({posts}) => (
 )
 
 export async function getStaticProps() {
-  const res = await fetch(
-    'https://webdevstudios.com/wp-json/wp/v2/posts?_embed'
-  )
+  const res = await fetch(`${config.apiUrl}posts?_embed`)
   const posts = await res.json()
 
   return {

@@ -1,47 +1,36 @@
 import PropTypes from 'prop-types'
+import Tags from '../../components/blog/Tags'
 
-const Card = (props) => (
-  <article className="max-w-sm rounded overflow-hidden shadow-lg">
+const Card = ({post}) => (
+  <article key={post.id} className="max-w-sm rounded overflow-hidden shadow-lg">
     <img
       className="w-full"
-      src={props.thumbnail}
+      src={post.acf.blog_hero_image.url}
       alt="Sunset in the mountains"
     />
     <div className="px-6 py-4">
       <h1
         className="font-bold text-xl mb-2"
-        dangerouslySetInnerHTML={{__html: props.title}}
+        dangerouslySetInnerHTML={{__html: post.title.rendered}}
       />
       <div
         className="text-gray-700 text-base"
-        dangerouslySetInnerHTML={{__html: props.text}}
+        dangerouslySetInnerHTML={{__html: post.excerpt.rendered}}
       />
     </div>
+    {/* <pre>{JSON.stringify(post, null, 2)}</pre> */}
     <div className="px-6 py-4">
-      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-        #photography
-      </span>
-      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-        #travel
-      </span>
-      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
-        #winter
-      </span>
+      <Tags terms={post.tags} />
     </div>
   </article>
 )
 
 Card.propTypes = {
-  props: PropTypes.object,
-  thumbnail: PropTypes.string,
-  title: PropTypes.string,
-  text: PropTypes.string
+  post: PropTypes.object
 }
 
 Card.defaultProps = {
-  thumbnail: '',
-  title: '',
-  text: ''
+  post: {}
 }
 
 export default Card

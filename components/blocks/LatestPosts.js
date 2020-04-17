@@ -13,11 +13,7 @@ const LatestPosts = ({posts}) => (
         <div className="w-full sm:w-1/2 md:w-1/3 mb-4" key={post.id}>
           <Link href="/blog/[...all]" as={`/blog/${post.id}/${post.slug}`}>
             <a>
-              <Card
-                thumbnail={post.acf.blog_hero_image.url}
-                title={post.title.rendered}
-                text={post.excerpt.rendered}
-              />
+              <Card post={post} />
             </a>
           </Link>
         </div>
