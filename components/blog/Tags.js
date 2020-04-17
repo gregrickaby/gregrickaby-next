@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import {getTermNames} from '../../lib/api'
+import Link from 'next/link'
 
 const Tags = ({terms}) => {
   const tags = getTermNames('tags', terms)
@@ -11,8 +12,9 @@ const Tags = ({terms}) => {
           key={tag}
           className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
         >
-          {' '}
-          <strong>#{tag}</strong>{' '}
+          <Link href="/blog/tags/[...id]" as="/blog/tags/987">
+            <a>#{tag}</a>
+          </Link>
         </span>
       ))}
     </div>
