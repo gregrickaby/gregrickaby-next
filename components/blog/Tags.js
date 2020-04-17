@@ -5,9 +5,12 @@ const Tags = ({terms}) => {
   const tags = getTermNames('tags', terms)
 
   return (
-    <div className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+    <div className="inline-block">
       {tags.map((tag) => (
-        <span key={tag}>
+        <span
+          key={tag}
+          className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+        >
           {' '}
           <strong>#{tag}</strong>{' '}
         </span>
