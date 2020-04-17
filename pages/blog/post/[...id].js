@@ -1,9 +1,9 @@
-import Hero from '../../components/blog/Hero'
-import Layout from '../../components/common/Layout'
+import Hero from '../../../components/blog/Hero'
+import Layout from '../../../components/common/Layout'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
-import Tags from '../../components/blog/Tags'
-import config from '../../lib/config'
+import Tags from '../../../components/blog/Tags'
+import config from '../../../lib/config'
 import fetch from 'isomorphic-unfetch'
 import {FaArrowAltCircleLeft} from 'react-icons/fa'
 

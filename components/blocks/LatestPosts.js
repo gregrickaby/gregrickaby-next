@@ -10,7 +10,10 @@ const LatestPosts = ({posts}) => (
     <div className=" flex flex-wrap">
       {posts.slice(0, 3).map((post) => (
         <div className="w-full sm:w-1/2 md:w-1/3 mb-4" key={post.id}>
-          <Link href="/blog/[...id]" as={`/blog/${post.slug}/${post.id}`}>
+          <Link
+            href="/blog/post/[...id]"
+            as={`/blog/post/${post.slug}/${post.id}`}
+          >
             <a>
               <Card post={post} />
             </a>
