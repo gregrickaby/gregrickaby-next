@@ -35,7 +35,7 @@ const Post = ({post}) => {
 }
 
 export async function getServerSideProps(context) {
-  const id = context.query.all[0]
+  const id = context.query.id[1]
   const res = await fetch(`${config.apiUrl}posts/${id}?_embed`)
   const post = await res.json()
 
