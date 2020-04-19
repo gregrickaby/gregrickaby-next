@@ -17,6 +17,7 @@ const Hero = ({post}) => (
           className="rounded-full mb-4"
           style={{width: 96}}
           src={post._embedded.author[0].avatar_urls['96']}
+          alt={post.title.rendered}
         />
         <p className="text-lg text-white">By {post._embedded.author[0].name}</p>
         <span className="italic">
