@@ -1,6 +1,6 @@
+import Link from 'next/link'
 import PropTypes from 'prop-types'
 import {getTermNames} from '../../lib/api'
-import Link from 'next/link'
 
 const Tags = ({terms}) => {
   // Get all term names.
