@@ -11,13 +11,15 @@ const Homepage = ({posts}) => (
   <Layout>
     <div>
       <Hero
-        image={require('../public/wdscamp.jpg?resize&size=1920')}
+        image={require('../public/images/wdscamp.jpg?resize&size=1920')}
         title="Your Success Is Our Mission"
         text="WebDevStudios provides end-to-end WordPress opportunities from strategy and planning to website design and development."
         buttonText="Get Started Today"
       />
       <TwoColumn
-        column1={<img src={require('../public/640x480.png')} alt="column 1" />}
+        column1={
+          <img src={require('../public/images/640x480.png')} alt="column 1" />
+        }
         column2={
           <>
             <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mb-4">
@@ -58,7 +60,9 @@ const Homepage = ({posts}) => (
             <Button text="Learn More" url="/" />
           </>
         }
-        column2={<img src={require('../public/640x480.png')} alt="column 2" />}
+        column2={
+          <img src={require('../public/images/640x480.png')} alt="column 2" />
+        }
       />
       <LatestPosts posts={posts} />
     </div>
