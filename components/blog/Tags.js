@@ -1,8 +1,13 @@
+import Link from 'next/link'
 import PropTypes from 'prop-types'
 import {getTermNames} from '../../lib/api'
 
 const Tags = ({terms}) => {
+  // Get all term names.
   const tags = getTermNames('tags', terms)
+
+  // Grab the first TermID.
+  const termID = terms[0]
 
   return (
     <div className="inline-block">
@@ -11,8 +16,9 @@ const Tags = ({terms}) => {
           key={tag}
           className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
         >
-          {' '}
-          <strong>#{tag}</strong>{' '}
+          <Link href="/blog/tags/[...id]" as={`/blog/tags/${termID}`}>
+            <a>#{tag}</a>
+          </Link>
         </span>
       ))}
     </div>

@@ -7,11 +7,13 @@ const LatestPosts = ({posts}) => (
     <h1 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mb-4">
       Latest Posts
     </h1>
-    <div className=" flex flex-wrap">
-      {/* Loop through and display 3 posts */}
+    <div className="flex flex-wrap">
       {posts.slice(0, 3).map((post) => (
         <div className="w-full sm:w-1/2 md:w-1/3 mb-4" key={post.id}>
-          <Link href="/blog/[...all]" as={`/blog/${post.id}/${post.slug}`}>
+          <Link
+            href="/blog/post/[...id]"
+            as={`/blog/post/${post.slug}/${post.id}`}
+          >
             <a>
               <Card post={post} />
             </a>

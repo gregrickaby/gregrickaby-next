@@ -1,9 +1,9 @@
-import Hero from '../../components/blog/Hero'
-import Layout from '../../components/common/Layout'
+import Hero from '../../../components/blog/Hero'
+import Layout from '../../../components/common/Layout'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
-import Tags from '../../components/blog/Tags'
-import config from '../../lib/config'
+import Tags from '../../../components/blog/Tags'
+import config from '../../../lib/config'
 import fetch from 'isomorphic-unfetch'
 import {FaArrowAltCircleLeft} from 'react-icons/fa'
 
@@ -35,7 +35,7 @@ const Post = ({post}) => {
 }
 
 export async function getServerSideProps(context) {
-  const id = context.query.all[0]
+  const id = context.query.id[1]
   const res = await fetch(`${config.apiUrl}posts/${id}?_embed`)
   const post = await res.json()
 
