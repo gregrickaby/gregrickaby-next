@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types'
-import PostDate from '../../components/blog/PostDate'
 import Categories from '../../components/blog/Categories'
+import Link from 'next/link'
+import PostDate from '../../components/blog/PostDate'
+import PropTypes from 'prop-types'
 
 const Hero = ({post}) => (
   <section
@@ -19,7 +20,15 @@ const Hero = ({post}) => (
           src={post._embedded.author[0].avatar_urls['96']}
           alt={post.title.rendered}
         />
-        <p className="text-lg text-white">By {post._embedded.author[0].name}</p>
+        <p className="text-lg text-white mb-2">
+          By{' '}
+          <Link
+            href="/blog/author/[...id]"
+            as={`/blog/author/${post._embedded.author[0].id}`}
+          >
+            <a>{post._embedded.author[0].name}</a>
+          </Link>{' '}
+        </p>
         <span className="italic">
           Posted on <PostDate dateString={post.date} /> in
           <Categories terms={post.categories} />
