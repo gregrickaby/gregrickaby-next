@@ -30,11 +30,11 @@ const Hero = ({post}) => (
 )
 
 Hero.propTypes = {
-  post: PropTypes.array
+  post: PropTypes.object
 }
 
 Hero.defaultProps = {
-  post: []
+  post: {}
 }
 
 export default Hero
