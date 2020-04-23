@@ -1,10 +1,10 @@
+import Card from '../../../components/blocks/Card'
+import GoBack from '../../../components/common/GoBack'
 import Layout from '../../../components/common/Layout'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
-import Card from '../../../components/blocks/Card'
 import config from '../../../lib/config'
 import fetch from 'isomorphic-unfetch'
-import {FaArrowAltCircleLeft} from 'react-icons/fa'
 import {getTermNames} from '../../../lib/api'
 
 const TagArchive = ({posts, id}) => {
@@ -32,12 +32,7 @@ const TagArchive = ({posts, id}) => {
             </div>
           ))}
         </div>
-
-        <Link href="/">
-          <a className="flex">
-            <FaArrowAltCircleLeft size="18px" className="mr-2" /> Go Back
-          </a>
-        </Link>
+        <GoBack />
       </section>
     </Layout>
   )

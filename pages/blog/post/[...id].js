@@ -1,11 +1,10 @@
+import GoBack from '../../../components/common/GoBack'
 import Hero from '../../../components/blog/Hero'
 import Layout from '../../../components/common/Layout'
-import Link from 'next/link'
 import PropTypes from 'prop-types'
 import Tags from '../../../components/blog/Tags'
 import config from '../../../lib/config'
 import fetch from 'isomorphic-unfetch'
-import {FaArrowAltCircleLeft} from 'react-icons/fa'
 
 const Post = ({post}) => {
   return (
@@ -23,11 +22,7 @@ const Post = ({post}) => {
           <div className="border-b border-t py-4 my-12">
             Tagged in <Tags terms={post.tags} />
           </div>
-          <Link href="/">
-            <a className="flex">
-              <FaArrowAltCircleLeft size="18px" className="mr-2" /> Go Back
-            </a>
-          </Link>
+          <GoBack />
         </div>
       </article>
     </Layout>
