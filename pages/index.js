@@ -64,7 +64,12 @@ const Homepage = ({posts}) => (
           <img src={require('../public/images/640x480.png')} alt="column 2" />
         }
       />
-      <LatestPosts data={posts} display={3} />
+      <section className="container px-5 py-24 mx-auto">
+        <h1 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mb-4">
+          Latest Posts
+        </h1>
+        <LatestPosts data={posts} display={3} />
+      </section>
     </div>
   </Layout>
 )
