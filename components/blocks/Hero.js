@@ -12,14 +12,10 @@ const Hero = (props) => (
           <h1 className="title-font md:text-5xl sm:text-4xl text-3xl mb-8 font-bold text-white">
             {props.title}
           </h1>
-
           <p className="mb-12 leading-snug text-2xl font-medium text-white">
             {props.text}
           </p>
-
-          <a href={props.buttonUrl}>
-            <Button text={props.buttonText} />
-          </a>
+          <Button text={props.buttonText} url={props.buttonUrl} />
         </div>
       </div>
     </div>
