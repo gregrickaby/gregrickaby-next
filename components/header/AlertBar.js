@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Button from '../common/Buttons'
 import {FaInfoCircle} from 'react-icons/fa'
 
 const AlertBar = () => (
@@ -11,13 +11,7 @@ const AlertBar = () => (
       Something happened that you should know about, so we placed a message up
       here.
     </p>
-    <Link href="/alert">
-      <a>
-        <button className="bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded">
-          Learn More
-        </button>
-      </a>
-    </Link>
+    <Button text="Learn More" url="/alert" />
   </div>
 )
 
