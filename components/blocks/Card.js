@@ -18,7 +18,6 @@ const Card = ({post}) => (
         dangerouslySetInnerHTML={{__html: post.excerpt.rendered}}
       />
     </div>
-    {/* <pre>{JSON.stringify(post, null, 2)}</pre> */}
     <div className="px-6 py-4">
       <Tags terms={post.tags} />
     </div>
