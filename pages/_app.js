@@ -4,8 +4,8 @@ import '../styles/index.css'
 const App = ({Component, pageProps}) => <Component {...pageProps} />
 
 App.propTypes = {
-  Component: PropTypes.is.required,
-  pageProps: PropTypes.is.required
+  Component: PropTypes.any.isRequired,
+  pageProps: PropTypes.object.isRequired
 }
 
 export default App
