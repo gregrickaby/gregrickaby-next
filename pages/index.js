@@ -15,6 +15,7 @@ const Homepage = ({posts}) => (
         title="Your Success Is Our Mission"
         text="WebDevStudios provides end-to-end WordPress opportunities from strategy and planning to website design and development."
         buttonText="Get Started Today"
+        buttonUrl="/contact"
       />
       <TwoColumn
         column1={
@@ -36,7 +37,7 @@ const Homepage = ({posts}) => (
               interrete. Unum est sine dolore esse, alterum cum voluptate. Sed
               haec quidem liberius ab eo dicuntur et saepius.{' '}
             </p>
-            <Button text="Learn More" url="/" />
+            <Button text="Learn More" url="/contact" />
           </>
         }
       />
@@ -57,7 +58,7 @@ const Homepage = ({posts}) => (
               interrete. Unum est sine dolore esse, alterum cum voluptate. Sed
               haec quidem liberius ab eo dicuntur et saepius.{' '}
             </p>
-            <Button text="Learn More" url="/" />
+            <Button text="Learn More" url="/contact" />
           </>
         }
         column2={
