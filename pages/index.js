@@ -64,7 +64,7 @@ const Homepage = ({posts}) => (
           <img src={require('../public/images/640x480.png')} alt="column 2" />
         }
       />
-      <LatestPosts posts={posts} />
+      <LatestPosts data={posts} display={3} />
     </div>
   </Layout>
 )
