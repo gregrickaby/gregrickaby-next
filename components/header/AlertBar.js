@@ -11,7 +11,7 @@ const AlertBar = () => (
       Something happened that you should know about, so we placed a message up
       here.
     </p>
-    <Link href="/">
+    <Link href="/alert">
       <a>
         <button className="bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded">
           Learn More
