@@ -2,11 +2,11 @@ import Link from 'next/link'
 import {FaArrowRight} from 'react-icons/fa'
 
 const links = [
-  {href: '/', label: 'Solutions'},
-  {href: '/', label: 'Services'},
-  {href: '/', label: 'Portfolio'},
-  {href: '/', label: 'About'},
-  {href: '/', label: 'Blog'}
+  {href: '/solutions', label: 'Solutions'},
+  {href: '/services', label: 'Services'},
+  {href: '/portfolio', label: 'Portfolio'},
+  {href: '/about', label: 'About'},
+  {href: '/blog', label: 'Blog'}
 ]
 
 const Menu = () => (
