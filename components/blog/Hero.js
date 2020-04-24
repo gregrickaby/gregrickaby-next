@@ -31,7 +31,7 @@ const Hero = ({post}) => (
         </p>
         <span className="italic">
           Posted on <PostDate dateString={post.date} /> in
-          <Categories terms={post.categories} />
+          <Categories categories={post.categories} />
         </span>
       </div>
     </div>
@@ -40,10 +40,6 @@ const Hero = ({post}) => (
 
 Hero.propTypes = {
   post: PropTypes.object
-}
-
-Hero.defaultProps = {
-  post: {}
 }
 
 export default Hero
