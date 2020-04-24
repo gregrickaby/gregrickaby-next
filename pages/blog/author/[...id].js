@@ -55,8 +55,4 @@ AuthorArchive.propTypes = {
   id: PropTypes.string
 }
 
-AuthorArchive.defaultProps = {
-  posts: []
-}
-
 export default AuthorArchive

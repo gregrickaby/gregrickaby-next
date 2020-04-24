@@ -90,8 +90,4 @@ Homepage.propTypes = {
   posts: PropTypes.array
 }
 
-Homepage.defaultProps = {
-  posts: []
-}
-
 export default Homepage

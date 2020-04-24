@@ -56,8 +56,4 @@ TagArchive.propTypes = {
   id: PropTypes.string
 }
 
-TagArchive.defaultProps = {
-  posts: []
-}
-
 export default TagArchive

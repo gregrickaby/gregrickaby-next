@@ -10,8 +10,4 @@ PostDate.propTypes = {
   dateString: PropTypes.string
 }
 
-PostDate.defaultProps = {
-  dateString: ''
-}
-
 export default PostDate

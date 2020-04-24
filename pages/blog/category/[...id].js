@@ -56,8 +56,4 @@ CategoryArchive.propTypes = {
   id: PropTypes.string
 }
 
-CategoryArchive.defaultProps = {
-  posts: []
-}
-
 export default CategoryArchive
