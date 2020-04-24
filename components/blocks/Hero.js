@@ -22,20 +22,20 @@ const Hero = (props) => (
   </section>
 )
 
-Hero.defaultProps = {
-  image: 'https://picsum.photos/1280/720',
-  title: 'Hero Title',
-  description: 'Hero Description',
-  buttonUrl: '/',
-  buttonText: 'Button Text'
-}
-
 Hero.propTypes = {
   image: PropTypes.object,
   title: PropTypes.string,
   text: PropTypes.string,
   buttonUrl: PropTypes.string,
   buttonText: PropTypes.string
+}
+
+Hero.defaultProps = {
+  image: 'https://picsum.photos/1280/720',
+  title: 'Hero Title',
+  description: 'Hero Description',
+  buttonUrl: '/',
+  buttonText: 'Button Text'
 }
 
 export default Hero
