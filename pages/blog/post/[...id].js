@@ -20,7 +20,7 @@ const Post = ({post}) => {
             dangerouslySetInnerHTML={{__html: post.content.rendered}}
           />
           <div className="border-b border-t py-4 my-12">
-            Tagged in <Tags terms={post.tags} />
+            Tagged in <Tags tags={post.tags} />
           </div>
           <GoBack />
         </div>
@@ -43,10 +43,6 @@ export async function getServerSideProps(context) {
 
 Post.propTypes = {
   post: PropTypes.object
-}
-
-Post.defaultProps = {
-  post: []
 }
 
 export default Post
