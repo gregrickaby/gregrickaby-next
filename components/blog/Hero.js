@@ -30,7 +30,7 @@ const Hero = ({post}) => (
           </Link>{' '}
         </p>
         <span className="italic">
-          Posted on <PostDate dateString={post.date} /> in
+          Posted on <PostDate dateString={post.date} /> in{' '}
           <Categories categories={post.categories} />
         </span>
       </div>
