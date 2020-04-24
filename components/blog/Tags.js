@@ -2,31 +2,34 @@ import Link from 'next/link'
 import PropTypes from 'prop-types'
 import {getTermNames} from '../../lib/api'
 
-const Tags = ({terms}) => {
-  // Get all term names.
-  const tags = getTermNames('tags', terms)
-
-  // Grab the first TermID.
-  const termID = terms[0]
-
+const Tags = (props) => {
   return (
-    <div className="inline-block">
-      {tags.map((tag) => (
-        <span
-          key={tag}
-          className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
-        >
-          <Link href="/blog/tags/[...id]" as={`/blog/tags/${termID}`}>
-            <a>#{tag}</a>
-          </Link>
-        </span>
-      ))}
-    </div>
+    <>
+      {props.terms.length > 0 && (
+        <div className="inline-block">
+          {props.terms.map((id) => {
+            let tag = getTermNames('tags', id)
+            return (
+              <span
+                key={id}
+                className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+              >
+                {' '}
+                <Link href="/blog/tags/[...id]" as={`/blog/tags/${id}`}>
+                  <a>#{tag}</a>
+                </Link>
+              </span>
+            )
+          })}
+        </div>
+      )}
+    </>
   )
 }
 
 Tags.propTypes = {
-  terms: PropTypes.array
+  terms: PropTypes.array,
+  data: PropTypes.object
 }
 
 Tags.defaultProps = {
