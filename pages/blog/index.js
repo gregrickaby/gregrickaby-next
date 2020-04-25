@@ -27,7 +27,7 @@ export async function getStaticProps() {
 }
 
 BlogArchive.propTypes = {
-  posts: PropTypes.object
+  posts: PropTypes.array
 }
 
 export default BlogArchive
