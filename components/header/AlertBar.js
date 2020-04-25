@@ -3,7 +3,7 @@ import {FaInfoCircle} from 'react-icons/fa'
 
 const AlertBar = () => (
   <div
-    className="flex items-center justify-center bg-orange-500 text-white font-medium px-4 py-3"
+    className="flex flex-col lg:flex-row items-center justify-center bg-orange-500 text-white font-medium px-4 py-3"
     role="alert"
   >
     <FaInfoCircle size="18px" />
