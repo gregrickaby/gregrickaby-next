@@ -1,18 +1,29 @@
-import Button from '../common/Buttons'
-import {FaInfoCircle} from 'react-icons/fa'
+import Button, {useCloseButton} from '../common/Buttons'
+import {FaInfoCircle, FaTimesCircle} from 'react-icons/fa'
 
-const AlertBar = () => (
-  <div
-    className="flex flex-col lg:flex-row items-center text-center justify-center bg-orange-500 text-white font-medium px-4 py-3"
-    role="alert"
-  >
-    <FaInfoCircle size="18px" />
-    <p className="ml-2 mr-4 py-4">
-      Something happened that you should know about, so we placed a message up
-      here.
-    </p>
-    <Button text="Learn More" url="/alert" />
-  </div>
-)
+const AlertBar = () => {
+  const {isShowing, toggle} = useCloseButton()
+
+  // Hide alert if closed.
+  if (!isShowing) {
+    return <></>
+  }
+
+  return (
+    <section className="alert-bar" role="alert">
+      <div className="alert-bar-content">
+        <FaInfoCircle size="18px" className="alert-bar-info-icon" />
+        <p>See how WebDevStudios is responding to COVID-19.</p>
+        <Button text="Learn More" url="/alert" />
+      </div>
+      <FaTimesCircle
+        size="18px"
+        className="close-button"
+        title="Close Alert"
+        onClick={toggle}
+      />
+    </section>
+  )
+}
 
 export default AlertBar
