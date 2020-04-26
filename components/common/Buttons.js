@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import PropTypes from 'prop-types'
-import {useState} from 'react'
 
 export default function Button(props) {
   return (
@@ -45,17 +44,4 @@ export function Outline(props) {
 Outline.propTypes = {
   url: PropTypes.string,
   text: PropTypes.string
-}
-
-export function useCloseButton() {
-  const [isShowing, setIsShowing] = useState(true)
-
-  function toggle() {
-    setIsShowing(!isShowing)
-  }
-
-  return {
-    isShowing,
-    toggle
-  }
 }

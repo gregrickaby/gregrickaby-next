@@ -1,4 +1,5 @@
-import Button, {useCloseButton} from '../common/Buttons'
+import Button from '../common/Buttons'
+import {useCloseButton} from '../../lib/hooks'
 import {FaInfoCircle, FaTimesCircle} from 'react-icons/fa'
 
 const AlertBar = () => {
