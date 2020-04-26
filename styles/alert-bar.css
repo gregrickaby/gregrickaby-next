@@ -1,0 +1,42 @@
+.alert-bar {
+  @apply relative bg-orange-500 text-white font-medium px-2 py-4;
+}
+
+.alert-bar-info-icon {
+  @apply hidden mr-4;
+}
+
+.alert-bar-content {
+  @apply flex flex-col justify-center items-center text-center;
+}
+
+.alert-bar-content button {
+  @apply mt-4;
+
+  min-width: 120px;
+}
+
+.close-button {
+  @apply absolute;
+
+  right: 3%;
+  top: 66%;
+}
+
+@screen sm {
+  .alert-bar-info-icon {
+    @apply block;
+  }
+
+  .alert-bar-content {
+    @apply flex-row pr-10;
+  }
+
+  .alert-bar-content button {
+    @apply mt-0 ml-4;
+  }
+
+  .close-button {
+    top: 38%;
+  }
+}
