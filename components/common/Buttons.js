@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 export default function Button(props) {
   return (
-    <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
+    <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
       <Link href={props.url}>
         <a>{props.text}</a>
       </Link>
@@ -17,7 +17,7 @@ Button.propTypes = {
 
 export function Pill(props) {
   return (
-    <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full">
+    <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full">
       <Link href={props.url}>
         <a>{props.text}</a>
       </Link>
@@ -32,7 +32,7 @@ Pill.propTypes = {
 
 export function Outline(props) {
   return (
-    <button className="bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">
+    <button className="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">
       <Link href={props.url}>
         <a>{props.text}</a>
       </Link>
