@@ -1,5 +1,7 @@
-import PropTypes from 'prop-types'
 import Link from 'next/link'
+import PropTypes from 'prop-types'
+import {useState} from 'react'
+
 export default function Button(props) {
   return (
     <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
@@ -43,4 +45,17 @@ export function Outline(props) {
 Outline.propTypes = {
   url: PropTypes.string,
   text: PropTypes.string
+}
+
+export function useCloseButton() {
+  const [isShowing, setIsShowing] = useState(true)
+
+  function toggle() {
+    setIsShowing(!isShowing)
+  }
+
+  return {
+    isShowing,
+    toggle
+  }
 }
