@@ -3,43 +3,5 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
-
-.post h2 {
-  @apply text-3xl font-bold my-4;
-}
-
-.post h3 {
-  @apply text-2xl font-bold my-3;
-}
-
-.post h4 {
-  @apply text-xl font-bold my-2;
-}
-
-.post h5 {
-  @apply text-lg font-bold my-1;
-}
-
-.post p {
-  @apply mb-2;
-}
-
-.post a {
-  @apply underline;
-}
-
-.post ul {
-  @apply list-disc ml-8;
-}
-
-.post code {
-  @apply bg-gray-300 font-mono text-sm p-1 overflow-auto align-middle leading-snug;
-}
-
-.post .wp-caption-text {
-  @apply font-light italic text-sm my-1;
-}
-
-.post .gallery {
-  @apply flex flex-wrap;
-}
+@import './alert-bar.css';
+@import './post.css';
