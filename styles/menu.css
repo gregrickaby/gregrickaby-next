@@ -3,11 +3,11 @@
 }
 
 .menu li {
-  @apply inline-flex mr-4;
+  @apply inline-flex mr-4 text-white;
 }
 
 .menu a:hover {
-  @apply text-gray-600;
+  @apply underline;
 }
 
 @screen lg {
