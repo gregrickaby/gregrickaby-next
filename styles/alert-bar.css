@@ -1,5 +1,5 @@
 .alert-bar {
-  @apply relative bg-orange-500 text-white font-medium px-2 py-4;
+  @apply relative bg-orange-500 text-white font-medium px-2 py-2;
 }
 
 .alert-bar-info-icon {
