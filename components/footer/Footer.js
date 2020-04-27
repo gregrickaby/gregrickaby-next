@@ -1,9 +1,7 @@
 import Logo from '../common/Logo'
-import StayConnected from '../blocks/StayConnected'
 
 const Footer = () => (
   <footer>
-    <StayConnected />
     <section className="footer container">
       <Logo />
       <div className="footer-text">
