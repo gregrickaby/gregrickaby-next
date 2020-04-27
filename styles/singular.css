@@ -1,0 +1,11 @@
+.singular {
+  @apply mx-auto text-lg;
+}
+
+.singular-content {
+  @apply max-w-2xl mx-auto;
+}
+
+.singular-tag-wrap {
+  @apply border-b border-t pt-4 pb-2 my-12;
+}

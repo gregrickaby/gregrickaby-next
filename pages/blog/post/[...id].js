@@ -9,18 +9,15 @@ import fetch from 'isomorphic-unfetch'
 const Post = ({post}) => {
   return (
     <Layout>
-      <article
-        className="mx-auto text-lg"
-        style={{fontFamily: 'Libre Franklin,sans-serif'}}
-      >
+      <article className="singular">
         <Hero post={post} />
-        <div className="max-w-4xl mx-auto">
+        <div className="singular-content">
           <div
-            className="post my-4 font-normal"
+            className="post"
             dangerouslySetInnerHTML={{__html: post.content.rendered}}
           />
-          <div className="border-b border-t py-4 my-12">
-            Tagged in <Tags tags={post.tags} />
+          <div className="singular-tag-wrap">
+            <Tags tags={post.tags} />
           </div>
           <GoBack />
         </div>
