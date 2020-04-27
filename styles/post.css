@@ -2,6 +2,14 @@
   @apply overflow-auto;
 }
 
+.post-content {
+  @apply max-w-2xl mx-auto;
+}
+
+.post-tag-wrap {
+  @apply border-b border-t pt-4 pb-2 my-12;
+}
+
 .post h2 {
   @apply text-3xl font-bold my-4;
 }
