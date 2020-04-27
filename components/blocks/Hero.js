@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
-import Button from '../common/Buttons'
+import Button from '../common/Button'
 
 const Hero = (props) => (
   <section
     className="text-gray-700 body-font text-center bg-cover bg-no-repeat"
     style={{backgroundImage: `url(${props.image})`}}
   >
-    <div style={{backgroundColor: 'rgba(0,0,0,0.5)'}}>
+    <div style={{backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
       <div className="container lg:py-48 lg:px-64 py-24 px-32 mx-auto">
         <div className="mx-auto">
           <h1 className="title-font md:text-5xl sm:text-4xl text-3xl mb-8 font-bold text-white">

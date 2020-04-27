@@ -1,4 +1,4 @@
-import Button from '../common/Buttons'
+import Button from '../common/Button'
 import {useCloseButton} from '../../lib/hooks'
 import {FaInfoCircle, FaTimesCircle} from 'react-icons/fa'
 
