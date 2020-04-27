@@ -1,0 +1,26 @@
+.footer {
+  @apply flex flex-col items-center mx-auto px-4 py-8 text-gray-700;
+}
+
+.footer-text {
+  @apply mt-4 text-sm text-center;
+}
+
+.footer-contact {
+  @apply text-center mx-auto mt-4 text-sm text-gray-700;
+}
+
+@screen lg {
+  .footer {
+    @apply flex-row;
+  }
+
+  .footer-text,
+  .footer-contact {
+    @apply mt-0 text-left;
+  }
+
+  .footer-text {
+    @apply ml-4;
+  }
+}

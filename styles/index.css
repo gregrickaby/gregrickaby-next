@@ -1,6 +1,7 @@
 /* purgecss start ignore */
 @tailwind base;
 @tailwind components;
+
 /* purgecss end ignore */
 @tailwind utilities;
 
@@ -8,3 +9,4 @@
 @import './header.css';
 @import './menu.css';
 @import './post.css';
+@import './footer.css';
