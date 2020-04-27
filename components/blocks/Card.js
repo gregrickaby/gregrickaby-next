@@ -1,26 +1,28 @@
 import PropTypes from 'prop-types'
 import Tags from '../../components/blog/Tags'
+import Link from 'next/link'
 
 const Card = ({post}) => (
-  <article key={post.id} className="max-w-sm rounded overflow-hidden shadow-lg">
+  <article key={post.id} className="card">
     {post.acf.blog_hero_image.url.length > 0 && (
-      <img
-        className="w-full"
-        src={post.acf.blog_hero_image.url}
-        alt={post.acf.blog_hero_image.title}
-      />
+      <Link href="/blog/post/[...id]" as={`/blog/post/${post.slug}/${post.id}`}>
+        <a>
+          <img
+            src={post.acf.blog_hero_image.url}
+            alt={post.acf.blog_hero_image.title}
+          />
+        </a>
+      </Link>
     )}
-    <div className="px-6 py-4">
-      <h1
-        className="font-bold text-xl mb-2"
-        dangerouslySetInnerHTML={{__html: post.title.rendered}}
-      />
-      <div
-        className="text-gray-700 text-base"
-        dangerouslySetInnerHTML={{__html: post.excerpt.rendered}}
-      />
+    <div className="card-content">
+      <Link href="/blog/post/[...id]" as={`/blog/post/${post.slug}/${post.id}`}>
+        <a>
+          <h1 dangerouslySetInnerHTML={{__html: post.title.rendered}} />
+        </a>
+      </Link>
+      <div dangerouslySetInnerHTML={{__html: post.excerpt.rendered}} />
     </div>
-    <div className="px-6 py-4">
+    <div className="card-tags">
       <Tags tags={post.tags} />
     </div>
   </article>
