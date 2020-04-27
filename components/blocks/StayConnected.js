@@ -14,7 +14,7 @@ const StayConnected = () => (
       </h2>
       <div className="flex mb-4 md:flex-row flex-col">
         <div className="md:w-1/4 sm:w-full mb-4">
-          <a href={config.facebookUrl} className="flex justify-center">
+          <a href={config.social.facebook.href} className="flex justify-center">
             <button
               className="text-white py-2 px-4 rounded flex justify-between items-center"
               style={{backgroundColor: '#036ee4'}}
@@ -25,7 +25,7 @@ const StayConnected = () => (
           </a>
         </div>
         <div className="md:w-1/4 sm:w-full mb-4">
-          <a href={config.twitterUrl} className="flex justify-center">
+          <a href={config.social.twitter.href} className="flex justify-center">
             <button
               className="text-white py-2 px-4 rounded flex justify-between items-center"
               style={{backgroundColor: '#1da1f2'}}
@@ -36,7 +36,10 @@ const StayConnected = () => (
           </a>
         </div>
         <div className="md:w-1/4 sm:w-full mb-4">
-          <a href={config.instagramUrl} className="flex justify-center">
+          <a
+            href={config.social.instagram.href}
+            className="flex justify-center"
+          >
             <button
               className="text-white py-2 px-4 rounded flex justify-between items-center"
               style={{backgroundColor: '#eb007a'}}
