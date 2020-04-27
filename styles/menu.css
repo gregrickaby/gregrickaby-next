@@ -1,5 +1,5 @@
 .menu {
-  @apply flex flex-wrap list-none mt-4;
+  @apply flex flex-wrap justify-center list-none mt-4;
 }
 
 .menu li {
