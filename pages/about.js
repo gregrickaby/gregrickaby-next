@@ -2,9 +2,9 @@ import Layout from '../components/common/Layout'
 
 const About = () => (
   <Layout>
-    <section className="singular container">
-      <h1 className="singular-title">About</h1>
-      <div className="singular-content">
+    <section className="page container">
+      <h1 className="page-title">About</h1>
+      <div className="page-content">
         <div className="post">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Istam
