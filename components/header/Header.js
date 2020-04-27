@@ -14,10 +14,10 @@ const Header = () => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
 
-    <header>
+    <header className="header">
       <AlertBar />
-      <div className="header container">
-        <Logo />
+      <div className="header-wrap container">
+        <Logo fill="#fff" />
         <Menu />
       </div>
     </header>

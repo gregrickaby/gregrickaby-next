@@ -1,9 +1,9 @@
 import Logo from '../common/Logo'
 
 const Footer = () => (
-  <footer>
-    <section className="footer container">
-      <Logo />
+  <footer className="footer">
+    <section className="footer-wrap container">
+      <Logo fill="#fff" />
       <div className="footer-text">
         Proudly powered by <a href="https://wordpress.org">WordPress</a> and{' '}
         <a href="https://nextjs.org">NextJS</a>. Hosted by{' '}
