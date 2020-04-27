@@ -1,0 +1,9 @@
+.header {
+  @apply flex flex-wrap flex-col items-center p-4;
+}
+
+@screen md {
+  .header {
+    @apply flex-row justify-between;
+  }
+}
