@@ -1,13 +1,14 @@
 import Link from 'next/link'
+import PropTypes from 'prop-types'
 
-const Logo = () => (
+const Logo = (props) => (
   <Link href="/">
     <a>
       <svg
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 538 185"
-        fill="#3f4040"
+        fill={props.fill}
         height="51px"
         width="150px"
       >
@@ -19,5 +20,13 @@ const Logo = () => (
     </a>
   </Link>
 )
+
+Logo.propTypes = {
+  fill: PropTypes.string
+}
+
+Logo.defaultProps = {
+  fill: '#3f4040'
+}
 
 export default Logo
