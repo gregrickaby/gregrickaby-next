@@ -1,17 +1,17 @@
 .menu {
-  @apply flex flex-wrap list-none;
+  @apply flex flex-wrap list-none mt-4;
 }
 
 .menu li {
-  @apply inline-flex mt-4 mr-4;
+  @apply inline-flex mr-4;
 }
 
 .menu a:hover {
   @apply text-gray-600;
 }
 
-@screen lg {
-  .menu li {
+@screen md {
+  .menu {
     @apply mt-0;
   }
 }
