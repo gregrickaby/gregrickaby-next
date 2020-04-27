@@ -3,6 +3,8 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
 @import './alert-bar.css';
+@import './header.css';
 @import './menu.css';
 @import './post.css';
