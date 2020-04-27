@@ -16,7 +16,7 @@
   min-width: 120px;
 }
 
-.close-button {
+.alert-bar-close-button {
   @apply absolute;
 
   right: 3%;
@@ -36,7 +36,7 @@
     @apply mt-0 ml-4;
   }
 
-  .close-button {
+  .alert-bar-close-button {
     top: 38%;
   }
 }

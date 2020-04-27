@@ -19,7 +19,7 @@ const AlertBar = () => {
       </div>
       <FaTimesCircle
         size="18px"
-        className="close-button"
+        className="alert-bar-close-button"
         title="Close Alert"
         onClick={toggle}
       />
