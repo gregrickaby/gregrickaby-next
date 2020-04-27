@@ -16,7 +16,7 @@
 
 @screen lg {
   .latest-posts-content {
-    @apply flex-row items-start justify-between;
+    @apply flex-row items-start justify-around;
   }
 
   .latest-posts article {
@@ -25,6 +25,10 @@
 }
 
 @screen xl {
+  .latest-posts-content {
+    @apply justify-between;
+  }
+
   .latest-posts article {
     @apply w-1/3;
   }
