@@ -8,14 +8,11 @@ import fetch from 'isomorphic-unfetch'
 
 const Post = ({post}) => (
   <Layout>
-    <article className="singular">
+    <article className="post">
       <Hero post={post} />
-      <div className="singular-content">
-        <div
-          className="post"
-          dangerouslySetInnerHTML={{__html: post.content.rendered}}
-        />
-        <div className="singular-tag-wrap">
+      <div className="post-content">
+        <div dangerouslySetInnerHTML={{__html: post.content.rendered}} />
+        <div className="post-tag-wrap">
           <Tags tags={post.tags} />
         </div>
         <GoBack />
