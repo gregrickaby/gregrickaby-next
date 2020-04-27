@@ -1,8 +1,8 @@
 .header {
-  @apply flex flex-wrap flex-col items-center p-4;
+  @apply flex flex-wrap flex-col mx-auto justify-center items-center p-4;
 }
 
-@screen md {
+@screen lg {
   .header {
     @apply flex-row justify-between;
   }

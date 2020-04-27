@@ -10,7 +10,7 @@
   @apply text-gray-600;
 }
 
-@screen md {
+@screen lg {
   .menu {
     @apply mt-0;
   }
