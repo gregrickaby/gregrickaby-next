@@ -1,7 +1,6 @@
 import Card from '../../../components/blocks/Card'
 import GoBack from '../../../components/common/GoBack'
 import Layout from '../../../components/common/Layout'
-import Link from 'next/link'
 import PropTypes from 'prop-types'
 import config from '../../../lib/config'
 import fetch from 'isomorphic-unfetch'
@@ -11,24 +10,11 @@ const AuthorArchive = ({posts, id}) => {
   const authorname = getTermNames('users', id)
   return (
     <Layout>
-      <section className="container px-5 py-24 mx-auto">
-        <h1 className="text-center mb-10 text-3xl">
-          <span className="bg-gray-200 rounded-full px-3 py-1 font-semibold text-gray-700 mr-2">
-            #{authorname}
-          </span>
-        </h1>
-        <div className="flex flex-wrap">
+      <section className="archive container">
+        <h1>Posts by {authorname}</h1>
+        <div className="archive-content">
           {posts.map((post) => (
-            <div className="w-full sm:w-1/2 md:w-1/3 mb-4" key={post.id}>
-              <Link
-                href="/blog/post/[...id]"
-                as={`/blog/post/${post.slug}/${post.id}`}
-              >
-                <a>
-                  <Card post={post} />
-                </a>
-              </Link>
-            </div>
+            <Card key={post.id} post={post} />
           ))}
         </div>
         <GoBack />
@@ -51,7 +37,7 @@ export async function getServerSideProps(context) {
 }
 
 AuthorArchive.propTypes = {
-  posts: PropTypes.object,
+  posts: PropTypes.array,
   id: PropTypes.string
 }
 
