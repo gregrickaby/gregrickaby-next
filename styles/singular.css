@@ -1,5 +1,9 @@
 .singular {
-  @apply mx-auto text-lg;
+  @apply px-4 py-8 mx-auto text-lg;
+}
+
+.singular-title {
+  @apply mb-4 text-3xl text-center;
 }
 
 .singular-content {
