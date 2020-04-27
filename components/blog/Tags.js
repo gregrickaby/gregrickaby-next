@@ -5,14 +5,11 @@ import {getTermNames} from '../../lib/api'
 const Tags = (props) => (
   <>
     {props.tags.length > 0 && (
-      <div className="inline-block">
+      <div className="tags">
         {props.tags.map((id) => {
           let tagName = getTermNames('tags', id)
           return (
-            <span
-              key={id}
-              className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
-            >
+            <span key={id} className="tag">
               {' '}
               <Link href="/blog/tags/[...id]" as={`/blog/tags/${id}`}>
                 <a>#{tagName}</a>

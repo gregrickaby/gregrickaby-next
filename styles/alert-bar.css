@@ -1,5 +1,5 @@
 .alert-bar {
-  @apply relative bg-orange-500 text-white font-medium px-2 py-4;
+  @apply relative bg-orange-500 text-white font-medium px-2 py-2;
 }
 
 .alert-bar-info-icon {
@@ -16,11 +16,11 @@
   min-width: 120px;
 }
 
-.close-button {
+.alert-bar-close-button {
   @apply absolute;
 
   right: 3%;
-  top: 66%;
+  top: 60%;
 }
 
 @screen sm {
@@ -36,7 +36,7 @@
     @apply mt-0 ml-4;
   }
 
-  .close-button {
+  .alert-bar-close-button {
     top: 38%;
   }
 }

@@ -1,0 +1,19 @@
+.card {
+  @apply max-w-sm rounded overflow-hidden shadow-lg;
+}
+
+.card img {
+  @apply w-full;
+}
+
+.card-content {
+  @apply px-4 py-4;
+}
+
+.card-content h1 {
+  @apply mb-2 text-xl text-left font-bold;
+}
+
+.card-tags {
+  @apply p-4;
+}

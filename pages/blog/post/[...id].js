@@ -6,28 +6,20 @@ import Tags from '../../../components/blog/Tags'
 import config from '../../../lib/config'
 import fetch from 'isomorphic-unfetch'
 
-const Post = ({post}) => {
-  return (
-    <Layout>
-      <article
-        className="mx-auto text-lg"
-        style={{fontFamily: 'Libre Franklin,sans-serif'}}
-      >
-        <Hero post={post} />
-        <div className="max-w-4xl mx-auto">
-          <div
-            className="post my-4 font-normal"
-            dangerouslySetInnerHTML={{__html: post.content.rendered}}
-          />
-          <div className="border-b border-t py-4 my-12">
-            Tagged in <Tags tags={post.tags} />
-          </div>
-          <GoBack />
+const Post = ({post}) => (
+  <Layout>
+    <article className="post">
+      <Hero post={post} />
+      <div className="post-content">
+        <div dangerouslySetInnerHTML={{__html: post.content.rendered}} />
+        <div className="post-tag-wrap">
+          <Tags tags={post.tags} />
         </div>
-      </article>
-    </Layout>
-  )
-}
+        <GoBack />
+      </div>
+    </article>
+  </Layout>
+)
 
 export async function getServerSideProps(context) {
   const id = context.query.id[1]

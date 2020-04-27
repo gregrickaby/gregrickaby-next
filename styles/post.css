@@ -1,3 +1,15 @@
+.post {
+  @apply overflow-auto;
+}
+
+.post-content {
+  @apply max-w-2xl mx-auto;
+}
+
+.post-tag-wrap {
+  @apply border-b border-t pt-4 pb-2 my-12;
+}
+
 .post h2 {
   @apply text-3xl font-bold my-4;
 }
@@ -15,7 +27,7 @@
 }
 
 .post p {
-  @apply mb-2;
+  @apply mb-8;
 }
 
 .post a {
@@ -23,17 +35,41 @@
 }
 
 .post ul {
-  @apply list-disc ml-8;
+  @apply list-disc ml-8 mb-8;
 }
 
 .post code {
   @apply bg-gray-300 font-mono text-sm p-1 overflow-auto align-middle leading-snug;
 }
 
+.post figure {
+  @apply mb-8;
+}
+
 .post .wp-caption-text {
-  @apply font-light italic text-sm my-1;
+  @apply font-light italic text-sm my-1 text-center;
 }
 
 .post .gallery {
-  @apply flex flex-wrap;
+  @apply flex;
+}
+
+.post .gallery .gallery-item {
+  @apply flex flex-col items-center text-center;
+}
+
+.post .alignleft {
+  @apply float-left mr-8;
+}
+
+.post .aligncenter {
+  @apply text-center mx-auto mb-8;
+}
+
+.post .alignright {
+  @apply float-right ml-8;
+}
+
+.post .twitter-tweet {
+  @apply pt-6 pr-6 pl-4 pb-1 bg-gray-400;
 }

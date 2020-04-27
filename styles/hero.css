@@ -1,0 +1,37 @@
+.hero {
+  @apply mb-16 bg-cover bg-no-repeat text-white text-center;
+}
+
+.hero-content {
+  @apply flex flex-col items-center mx-auto py-12 px-16;
+}
+
+.hero-content h1 {
+  @apply mb-8 text-3xl font-bold;
+}
+
+.hero-content img {
+  @apply rounded-full mb-4;
+}
+
+.hero-content p {
+  @apply mb-2 text-lg text-white;
+}
+
+.hero-content span {
+  @apply text-sm italic;
+}
+
+@screen lg {
+  .hero-content {
+    @apply py-24 px-32;
+  }
+
+  .hero-content h1 {
+    @apply text-4xl;
+  }
+
+  .hero-content span {
+    @apply text-base;
+  }
+}

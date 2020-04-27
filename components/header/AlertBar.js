@@ -1,4 +1,4 @@
-import Button from '../common/Buttons'
+import Button from '../common/Button'
 import {useCloseButton} from '../../lib/hooks'
 import {FaInfoCircle, FaTimesCircle} from 'react-icons/fa'
 
@@ -19,7 +19,7 @@ const AlertBar = () => {
       </div>
       <FaTimesCircle
         size="18px"
-        className="close-button"
+        className="alert-bar-close-button"
         title="Close Alert"
         onClick={toggle}
       />

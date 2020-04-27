@@ -5,15 +5,17 @@ import {getTermNames} from '../../lib/api'
 const Categories = (props) => (
   <>
     {props.categories.length > 0 && (
-      <div className="inline-block">
+      <div className="categories">
         {props.categories.map((id) => {
           let categoryName = getTermNames('categories', id)
           return (
-            <span key={id}>
-              <Link href="/blog/category/[...id]" as={`/blog/category/${id}`}>
-                <a>{categoryName} </a>
-              </Link>
-            </span>
+            <Link
+              key={id}
+              href="/blog/category/[...id]"
+              as={`/blog/category/${id}`}
+            >
+              <a>{categoryName} </a>
+            </Link>
           )
         })}
       </div>

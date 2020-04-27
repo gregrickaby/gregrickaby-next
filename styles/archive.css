@@ -1,0 +1,35 @@
+.archive {
+  @apply px-4 py-8 mx-auto;
+}
+
+.archive h1 {
+  @apply text-center mb-10 text-3xl;
+}
+
+.archive-content {
+  @apply flex flex-col flex-wrap items-center;
+}
+
+.archive-content article {
+  @apply mb-8;
+}
+
+@screen lg {
+  .archive-content {
+    @apply flex-row items-start justify-around;
+  }
+
+  .archive-content article {
+    @apply w-1/2 mx-2;
+  }
+}
+
+@screen xl {
+  .archive-content {
+    @apply justify-between;
+  }
+
+  .archive-content article {
+    @apply w-1/3;
+  }
+}
