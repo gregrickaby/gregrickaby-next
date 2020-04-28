@@ -1,4 +1,4 @@
-import LatestPosts from '../../components/blocks/LatestPosts'
+import LatestPosts from '../../components/common/LatestPosts'
 import Layout from '../../components/global/Layout'
 import PropTypes from 'prop-types'
 import config from '../../lib/config'
