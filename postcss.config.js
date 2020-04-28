@@ -1,5 +1,6 @@
 module.exports = {
   plugins: [
+    'postcss-nested',
     'tailwindcss',
     ...(process.env.NODE_ENV === 'production'
       ? [
@@ -16,7 +17,6 @@ module.exports = {
           ]
         ]
       : []),
-    'postcss-preset-env',
-    'postcss-nested'
+    'postcss-preset-env'
   ]
 }
