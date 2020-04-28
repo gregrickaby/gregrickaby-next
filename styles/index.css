@@ -1,12 +1,9 @@
-/* purgecss start ignore */
 @tailwind base;
 @tailwind components;
-
-/* purgecss end ignore */
 @tailwind utilities;
 
+@import './components/global/index.css';
+@import './pages/index.css';
 @import './components/blocks/index.css';
 @import './components/blog/index.css';
 @import './components/common/index.css';
-@import './components/global/index.css';
-@import './pages/index.css';
