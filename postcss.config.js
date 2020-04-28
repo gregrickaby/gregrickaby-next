@@ -16,6 +16,7 @@ module.exports = {
           ]
         ]
       : []),
-    'postcss-preset-env'
+    'postcss-preset-env',
+    'postcss-nested'
   ]
 }
