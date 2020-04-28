@@ -1,13 +1,13 @@
 .menu {
   @apply flex flex-wrap justify-center list-none mt-4;
-}
 
-.menu li {
-  @apply inline-flex mr-4 text-white;
-}
+  li {
+    @apply inline-flex mr-4 text-white;
+  }
 
-.menu a:hover {
-  @apply underline;
+  a:hover {
+    @apply underline;
+  }
 }
 
 @screen lg {

@@ -1,42 +1,44 @@
 .alert-bar {
   @apply relative bg-orange-500 text-white font-medium px-2 py-2;
-}
 
-.alert-bar-info-icon {
-  @apply hidden mr-4;
-}
+  &-info-icon {
+    @apply hidden mr-4;
+  }
 
-.alert-bar-content {
-  @apply flex flex-col justify-center items-center text-center;
-}
+  &-content {
+    @apply flex flex-col justify-center items-center text-center;
 
-.alert-bar-content button {
-  @apply mt-4;
+    button {
+      @apply mt-4;
 
-  min-width: 120px;
-}
+      min-width: 120px;
+    }
+  }
 
-.alert-bar-close-button {
-  @apply absolute;
+  &-close-button {
+    @apply absolute;
 
-  right: 3%;
-  top: 60%;
+    right: 3%;
+    top: 60%;
+  }
 }
 
 @screen sm {
-  .alert-bar-info-icon {
-    @apply block;
-  }
+  .alert-bar {
+    &-info-icon {
+      @apply block;
+    }
 
-  .alert-bar-content {
-    @apply flex-row pr-10;
-  }
+    &-content {
+      @apply flex-row pr-10;
 
-  .alert-bar-content button {
-    @apply mt-0 ml-4;
-  }
+      button {
+        @apply mt-0 ml-4;
+      }
+    }
 
-  .alert-bar-close-button {
-    top: 38%;
+    &-close-button {
+      top: 38%;
+    }
   }
 }

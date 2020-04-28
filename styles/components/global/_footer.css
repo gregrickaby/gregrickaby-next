@@ -2,24 +2,26 @@
   @apply px-4 py-8 text-white;
 
   background-color: #3f4040;
-}
 
-.footer-wrap {
-  @apply flex flex-col items-center mx-auto text-center;
-}
+  &-wrap {
+    @apply flex flex-col items-center mx-auto text-center;
+  }
 
-.footer-text,
-.footer-contact {
-  @apply mt-4 text-sm;
+  &-text,
+  &-contact {
+    @apply mt-4 text-sm;
+  }
 }
 
 @screen lg {
-  .footer-wrap {
-    @apply flex-row justify-between;
-  }
+  .footer {
+    &-wrap {
+      @apply flex-row justify-between;
+    }
 
-  .footer-text,
-  .footer-contact {
-    @apply mt-0;
+    &-text,
+    &-contact {
+      @apply mt-0;
+    }
   }
 }

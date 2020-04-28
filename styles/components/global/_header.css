@@ -1,9 +1,9 @@
 .header {
   background-color: #3f4040;
-}
 
-.header-wrap {
-  @apply flex flex-wrap flex-col mx-auto justify-center items-center p-4;
+  &-wrap {
+    @apply flex flex-wrap flex-col mx-auto justify-center items-center p-4;
+  }
 }
 
 @screen lg {

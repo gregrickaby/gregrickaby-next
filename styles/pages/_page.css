@@ -1,11 +1,11 @@
 .page {
   @apply mt-8 mx-auto;
-}
 
-.page-title {
-  @apply mb-4 text-3xl text-center;
-}
+  &-title {
+    @apply mb-4 text-3xl text-center;
+  }
 
-.page-content {
-  @apply max-w-2xl mx-auto;
+  &-content {
+    @apply max-w-2xl mx-auto;
+  }
 }

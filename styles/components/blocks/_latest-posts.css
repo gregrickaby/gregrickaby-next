@@ -1,35 +1,39 @@
 .latest-posts {
   @apply mx-auto;
-}
 
-.latest-posts h1 {
-  @apply mb-4 text-3xl text-center;
-}
+  &-content {
+    @apply flex flex-col flex-wrap items-center;
+  }
 
-.latest-posts-content {
-  @apply flex flex-col flex-wrap items-center;
-}
+  h1 {
+    @apply mb-4 text-3xl text-center;
+  }
 
-.latest-posts article {
-  @apply mb-8;
+  article {
+    @apply mb-8;
+  }
 }
 
 @screen lg {
-  .latest-posts-content {
-    @apply flex-row items-start justify-around;
-  }
+  .latest-posts {
+    &-content {
+      @apply flex-row items-start justify-around;
+    }
 
-  .latest-posts article {
-    @apply w-1/2 mx-2;
+    article {
+      @apply w-1/2 mx-2;
+    }
   }
 }
 
 @screen xl {
-  .latest-posts-content {
-    @apply justify-between;
-  }
+  .latest-posts {
+    &-content {
+      @apply justify-between;
+    }
 
-  .latest-posts article {
-    @apply w-1/3;
+    article {
+      @apply w-1/3;
+    }
   }
 }
