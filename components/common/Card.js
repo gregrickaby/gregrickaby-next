@@ -17,7 +17,7 @@ const Card = ({post}) => (
     <div className="card-content">
       <Link href="/blog/post/[...id]" as={`/blog/post/${post.slug}/${post.id}`}>
         <a>
-          <h1 dangerouslySetInnerHTML={{__html: post.title.rendered}} />
+          <h2 dangerouslySetInnerHTML={{__html: post.title.rendered}} />
         </a>
       </Link>
       <div dangerouslySetInnerHTML={{__html: post.excerpt.rendered}} />
