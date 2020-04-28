@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import Tags from '../../components/blog/Tags'
+import Tags from '../blog/Tags'
 import Link from 'next/link'
 
 const Card = ({post}) => (

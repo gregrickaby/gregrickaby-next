@@ -1,4 +1,4 @@
-import Footer from '../footer/Footer'
+import Footer from './Footer'
 import Header from '../header/Header'
 import PropTypes from 'prop-types'
 

@@ -1,7 +1,7 @@
-import AlertBar from './AlertBar'
+import AlertBar from '../common/AlertBar'
 import Head from 'next/head'
 import Logo from '../common/Logo'
-import Menu from './Menu'
+import Menu from '../common/Menu'
 import config from '../../lib/config'
 
 const Header = () => (
