@@ -5,8 +5,11 @@
 /* purgecss end ignore */
 @tailwind utilities;
 
+/* purgecss start ignore */
 @import './components/global/index.css';
 @import './pages/index.css';
 @import './components/blocks/index.css';
 @import './components/blog/index.css';
 @import './components/common/index.css';
+
+/* purgecss end ignore */
