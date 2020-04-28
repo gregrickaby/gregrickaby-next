@@ -1,4 +1,4 @@
-import Layout from '../components/common/Layout'
+import Layout from '../components/global/Layout'
 
 const Solutions = () => (
   <Layout>
