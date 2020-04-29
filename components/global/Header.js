@@ -14,9 +14,9 @@ const Header = () => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
 
-    <header className="header">
+    <header style={{backgroundColor: '#3f4040'}}>
       <AlertBar />
-      <div className="header-wrap container">
+      <div className="container flex flex-wrap flex-col mx-auto justify-center items-center p-4 lg:flex-row lg:justify-between">
         <Logo fill="#fff" />
         <Menu />
       </div>

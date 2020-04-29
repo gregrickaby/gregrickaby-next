@@ -6,9 +6,10 @@ import fetch from 'isomorphic-unfetch'
 
 const Homepage = ({posts}) => (
   <Layout>
-    <div className="page container">
-      <LatestPosts title="Latest Posts" data={posts} display={9} />
-    </div>
+    <section className="container px-4 py-8 mx-auto">
+      <h1 className="text-center mb-10 text-3xl">The Latest</h1>
+      <LatestPosts data={posts} display={3} />
+    </section>
   </Layout>
 )
 

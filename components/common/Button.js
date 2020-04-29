@@ -16,7 +16,7 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-  buttonClass: 'button'
+  buttonClass: 'py-2 px-4 bg-orange-600 text-white font-bold rounded'
 }
 
 export default Button

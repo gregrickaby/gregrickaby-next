@@ -2,9 +2,9 @@ import PropTypes from 'prop-types'
 import Card from './Card'
 
 const LatestPosts = (props) => (
-  <section className="latest-posts container">
-    <h1>{props.title}</h1>
-    <div className="latest-posts-content">
+  <section className="container mx-auto">
+    <h1 className="mb-4 text-3xl text-center">{props.title}</h1>
+    <div className="flex flex-col flex-wrap items-center lg:flex-row lg:items-start lg:justify-around xl:justify-between">
       {props.data.slice(0, props.display).map((post) => (
         <Card key={post.id} post={post} />
       ))}

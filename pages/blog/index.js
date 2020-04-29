@@ -6,8 +6,8 @@ import fetch from 'isomorphic-unfetch'
 
 const BlogArchive = ({posts}) => (
   <Layout>
-    <section className="archive container">
-      <h1>Our Blog</h1>
+    <section className="container px-4 py-8 mx-auto">
+      <h1 className="text-center mb-10 text-3xl">Our Blog</h1>
       <LatestPosts data={posts} display={9} />
     </section>
   </Layout>

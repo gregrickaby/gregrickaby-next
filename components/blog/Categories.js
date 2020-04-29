@@ -5,7 +5,7 @@ import {getTermNames} from '../../lib/api'
 const Categories = (props) => (
   <>
     {props.categories.length > 0 && (
-      <div className="categories">
+      <div className="inline-block">
         {props.categories.map((id) => {
           let categoryName = getTermNames('categories', id)
           return (

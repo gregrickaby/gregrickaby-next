@@ -10,9 +10,9 @@ const TagArchive = ({posts, id}) => {
   const tagname = getTermNames('tags', id)
   return (
     <Layout>
-      <section className="archive container">
-        <h1>Posts in {tagname}</h1>
-        <div className="archive-content">
+      <section className="container px-4 py-8 mx-auto">
+        <h1 className="text-center mb-10 text-3xl">Posts in {tagname}</h1>
+        <div className="flex flex-col flex-wrap items-center lg:lex-row lg:items-start lg:justify-around xl:justify-between">
           {posts.map((post) => (
             <Card key={post.id} post={post} />
           ))}
