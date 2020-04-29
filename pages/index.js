@@ -7,29 +7,26 @@ import {getAcfBlocksSlugs} from '../lib/api'
 
 const Homepage = ({page}) => (
   <Layout>
-    <section className="container px-4 py-8 mx-auto">
-      <h1 className="text-center mb-10 text-3xl">The Latest</h1>
-      {getAcfBlocksSlugs({page}).map((slug) => {
-        switch (slug) {
-          case 'homepage_fold':
-            return <HomepageFold data={page} />
-          case 'logo_train':
-            return 'logo_train'
-          case 'full_width_fiftyfifty':
-            return 'full_width_fiftyfifty'
-          case 'featured_work':
-            return 'featured_work'
-          case 'testimonial_slideshow':
-            return 'testimonial_slideshow'
-          case 'featured_books':
-            return 'featured_books'
-          case 'recent_blog_posts':
-            return 'recent_blog_posts'
-          default:
-            return slug // helps identify which slugs aren't found in the switch!
-        }
-      })}
-    </section>
+    {getAcfBlocksSlugs({page}).map((slug) => {
+      switch (slug) {
+        case 'homepage_fold':
+          return <HomepageFold data={page} />
+        case 'logo_train':
+          return 'logo_train'
+        case 'full_width_fiftyfifty':
+          return 'full_width_fiftyfifty'
+        case 'featured_work':
+          return 'featured_work'
+        case 'testimonial_slideshow':
+          return 'testimonial_slideshow'
+        case 'featured_books':
+          return 'featured_books'
+        case 'recent_blog_posts':
+          return 'recent_blog_posts'
+        default:
+          return slug // helps identify which slugs aren't found in the switch!
+      }
+    })}
   </Layout>
 )
 
