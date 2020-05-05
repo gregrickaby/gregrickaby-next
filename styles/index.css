@@ -1,9 +1,5 @@
-/* purgecss start ignore */
 @tailwind base;
 @tailwind components;
-
-/* purgecss end ignore */
-@tailwind utilities;
 
 .close-icon {
   @apply absolute;
@@ -97,3 +93,5 @@
 .post .tag a {
   @apply no-underline;
 }
+
+@tailwind utilities;
