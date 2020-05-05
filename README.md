@@ -4,7 +4,7 @@
 
 💻 Interact on [CodeSandbox](https://codesandbox.io/s/github/gregrickaby/nextjs-wordpress)
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app) and hosted on [Now](https://zeit.co/).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app) and hosted on [Now](https://vercel.com/).
 
 ## Table of Contents
 
@@ -37,7 +37,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### TailwindCSS
 
-Please see the Tailwind [documentation](https://tailwindcss.com/docs/) to reference all the CSS classes. Nesting is supported thanks to [postcss-nested](https://github.com/postcss/postcss-nested), and [postcss-preset-env](https://preset-env.cssdb.org/) handles adding stage 2+ support with autoprefixing.
+Please see the Tailwind [documentation](https://tailwindcss.com/docs/) to reference all the CSS classes and [postcss-preset-env](https://preset-env.cssdb.org/) handles adding stage 2+ support with autoprefixing.
 
 ### Image Optimization
 
