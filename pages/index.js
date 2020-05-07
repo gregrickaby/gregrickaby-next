@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import config from '../lib/config'
 import fetch from 'isomorphic-unfetch'
 import HomepageFold from '../components/blocks/HomepageFold'
+import LogoTrain from '../components/blocks/LogoTrain'
 import {getAcfBlocksSlugs} from '../lib/api'
 
 const Homepage = ({page}) => (
@@ -12,17 +13,17 @@ const Homepage = ({page}) => (
         case 'homepage_fold':
           return <HomepageFold data={page} />
         case 'logo_train':
-          return 'logo_train'
+          return <LogoTrain data={page} />
         case 'full_width_fiftyfifty':
-          return 'full_width_fiftyfifty'
+          return ''
         case 'featured_work':
-          return 'featured_work'
+          return ''
         case 'testimonial_slideshow':
-          return 'testimonial_slideshow'
+          return ''
         case 'featured_books':
-          return 'featured_books'
+          return ''
         case 'recent_blog_posts':
-          return 'recent_blog_posts'
+          return ''
         default:
           return slug // helps identify which slugs aren't found in the switch!
       }
