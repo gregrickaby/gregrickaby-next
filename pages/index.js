@@ -11,9 +11,9 @@ const Homepage = ({page}) => (
     {getAcfBlocksSlugs({page}).map((slug) => {
       switch (slug) {
         case 'homepage_fold':
-          return <HomepageFold data={page} />
+          return <HomepageFold key={slug} data={page} />
         case 'logo_train':
-          return <LogoTrain data={page} />
+          return <LogoTrain key={slug} data={page} />
         case 'full_width_fiftyfifty':
           return ''
         case 'featured_work':
