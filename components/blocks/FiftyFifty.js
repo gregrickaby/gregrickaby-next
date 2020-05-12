@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import {getBlockData} from '../../lib/api'
+import {getBlockData} from 'lib/api'
 
 const FiftyFifty = (props) => {
   const blockData = getBlockData(
@@ -26,7 +26,7 @@ const FiftyFifty = (props) => {
         {
           // Map over Case Studies
           blockData.case_study_button.map((study) => (
-            <div key={study.case_study_logo.ID} className="flex bg-gray-800">
+            <div key={study.case_study_logo.ID} className="grid bg-gray-800">
               <a className="flex-1 w-1/2 p-4" href={study.case_study_link}>
                 <img
                   src={study.case_study_logo.url}
