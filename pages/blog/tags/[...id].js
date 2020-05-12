@@ -3,7 +3,6 @@ import GoBack from '../../../components/common/GoBack'
 import Layout from '../../../components/global/Layout'
 import PropTypes from 'prop-types'
 import config from '../../../lib/config'
-import fetch from 'isomorphic-unfetch'
 import {getTermNames} from '../../../lib/api'
 
 const TagArchive = ({posts, id}) => {

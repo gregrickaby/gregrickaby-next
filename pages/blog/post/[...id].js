@@ -4,7 +4,6 @@ import Layout from '../../../components/global/Layout'
 import PropTypes from 'prop-types'
 import Tags from '../../../components/blog/Tags'
 import config from '../../../lib/config'
-import fetch from 'isomorphic-unfetch'
 
 const Post = ({post}) => (
   <Layout>

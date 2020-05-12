@@ -1,7 +1,6 @@
 import Layout from '../components/global/Layout'
 import PropTypes from 'prop-types'
 import config from '../lib/config'
-import fetch from 'isomorphic-unfetch'
 import HomepageFold from '../components/blocks/HomepageFold'
 import LogoTrain from '../components/blocks/LogoTrain'
 import FiftyFifty from '../components/blocks/FiftyFifty'
