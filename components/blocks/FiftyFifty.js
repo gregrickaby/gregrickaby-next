@@ -16,7 +16,7 @@ const FiftyFifty = (props) => {
         <p className="uppercase font-bold text-lg" style={{color: `#f3713c`}}>
           {blockData['pre-title_text']}
         </p>
-        <h2 className="capitalize text-5xl white leading-tight">
+        <h2 className="capitalize text-5xl text-white leading-tight">
           {blockData.block_options.section_title}
         </h2>
         <div
