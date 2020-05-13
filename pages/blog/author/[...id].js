@@ -1,10 +1,9 @@
-import Card from '../../../components/common/Card'
-import GoBack from '../../../components/common/GoBack'
-import Layout from '../../../components/global/Layout'
+import Card from 'components/common/Card'
+import GoBack from 'components/common/GoBack'
+import Layout from 'components/global/Layout'
 import PropTypes from 'prop-types'
-import config from '../../../lib/config'
-import fetch from 'isomorphic-unfetch'
-import {getTermNames} from '../../../lib/api'
+import config from 'lib/config'
+import {getTermNames} from 'lib/api'
 
 const AuthorArchive = ({posts, id}) => {
   const authorname = getTermNames('users', id)

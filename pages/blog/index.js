@@ -1,8 +1,7 @@
-import LatestPosts from '../../components/common/LatestPosts'
-import Layout from '../../components/global/Layout'
+import LatestPosts from 'components/common/LatestPosts'
+import Layout from 'components/global/Layout'
 import PropTypes from 'prop-types'
-import config from '../../lib/config'
-import fetch from 'isomorphic-unfetch'
+import config from 'lib/config'
 
 const BlogArchive = ({posts}) => (
   <Layout>
