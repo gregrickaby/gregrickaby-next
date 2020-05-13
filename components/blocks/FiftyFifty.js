@@ -8,7 +8,7 @@ const FiftyFifty = (props) => {
   )
 
   return (
-    <section className="md:grid md:grid-cols-2">
+    <section className="grid grid-cols-1 lg:grid-cols-2">
       <div
         className="space-y-10 p-10 text-white"
         style={{backgroundColor: `#40403f`}}
@@ -26,22 +26,27 @@ const FiftyFifty = (props) => {
         {
           // Map over Case Studies
           blockData.case_study_button.map((study) => (
-            <div key={study.case_study_logo.ID} className="grid bg-gray-800">
-              <a className="flex-1 w-1/2 p-4" href={study.case_study_link}>
+            <div
+              key={study.case_study_logo.ID}
+              className="w-100 lg:w-2/3 p-8 bg-gray-800"
+            >
+              <a
+                className="flex items-center justify-center lg:justify-start space-x-8"
+                href={study.case_study_link}
+              >
                 <img
                   src={study.case_study_logo.url}
                   alt={study.case_study_logo.title}
+                  width={`125`}
                 />
-              </a>
-              <a className="flex-1 w-1/2 p-4" href={study.case_study_link}>
-                <p>View Case Study</p>
+                <span>View Case Study &rarr;</span>
               </a>
             </div>
           ))
         }
       </div>
       <div
-        className=""
+        className="bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url(${blockData.media_right.sizes['fifty-fifty-media']})`
         }}
