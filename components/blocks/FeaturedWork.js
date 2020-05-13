@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import {getBlockData} from 'lib/api'
+import {getBlockData, getFeaturedImage} from 'lib/api'
 
 const FeaturedWork = (props) => {
   const blockData = getBlockData(props.data.acf.content_blocks, 'featured_work')
@@ -22,6 +22,21 @@ const FeaturedWork = (props) => {
         // Display title overlay on top
         // This is a funky masonry grid
         // Note the hover state (background gradient fades away)
+
+        // Map over logos...
+        blockData.featured_work.map((post) => {
+          // Find the logo associated with the portfolio item.
+          let logo = getFeaturedImage('portfolio', post.ID)
+          // Display the logo.
+          return (
+            <img
+              key={post.ID}
+              className="flex-auto object-scale-down w-4"
+              src={logo.source_url}
+              alt={logo.alt_text}
+            />
+          )
+        })
       }
       <pre>{JSON.stringify(blockData, null, 2)}</pre>
     </section>
