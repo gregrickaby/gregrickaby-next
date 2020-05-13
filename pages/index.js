@@ -4,6 +4,7 @@ import config from 'lib/config'
 import HomepageFold from 'components/blocks/HomepageFold'
 import LogoTrain from 'components/blocks/LogoTrain'
 import FiftyFifty from 'components/blocks/FiftyFifty'
+import FeaturedWork from 'components/blocks/FeaturedWork'
 import {getAcfBlocksSlugs} from 'lib/api'
 
 const Homepage = ({page}) => (
@@ -17,7 +18,7 @@ const Homepage = ({page}) => (
         case 'full_width_fiftyfifty':
           return <FiftyFifty key={slug} data={page} />
         case 'featured_work':
-          return ''
+          return <FeaturedWork key={slug} data={page} />
         case 'testimonial_slideshow':
           return ''
         case 'featured_books':
