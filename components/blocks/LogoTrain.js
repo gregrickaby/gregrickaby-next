@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import {getBlockData, getLogoTrainFeaturedMedia} from 'lib/api'
+import {getBlockData, getFeaturedImage} from 'lib/api'
 
 const LogoTrain = (props) => {
   // Get the block data for the Logo Train.
@@ -16,13 +16,13 @@ const LogoTrain = (props) => {
       <div className="flex flex-wrap space-x-4 md:flex-row">
         {
           // Map over logos...
-          blockData.logos.map((media) => {
-            // Find the logo associated with the client.
-            let logo = getLogoTrainFeaturedMedia(media.ID)
+          blockData.logos.map((post) => {
+            // Find the logo associated with the client item.
+            let logo = getFeaturedImage('clients', post.ID)
             // Display the logo.
             return (
               <img
-                key={media.ID}
+                key={post.ID}
                 className="flex-auto object-scale-down w-4"
                 src={logo.source_url}
                 alt={logo.alt_text}
