@@ -11,9 +11,10 @@
     "lint": "./node_modules/.bin/eslint ./ --fix || true"
   },
   "dependencies": {
-    "next": "9.4.0",
+    "next": "9.4.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "swr": "^0.2.0"
   },
   "devDependencies": {
     "date-fns": "^2.13.0",
@@ -34,7 +35,7 @@
     "prop-types": "^15.7.2",
     "react-icons": "^3.10.0",
     "responsive-loader": "^1.2.0",
-    "sharp": "^0.25.2",
+    "sharp": "^0.25.3",
     "stylelint-config-standard": "^20.0.0",
     "tailwindcss": "^1.4.6",
     "webp-loader": "^0.6.0"
