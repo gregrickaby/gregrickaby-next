@@ -30,6 +30,7 @@
     "imagemin-svgo": "^7.1.0",
     "install": "^0.13.0",
     "next-optimized-images": "^2.6.0",
+    "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.0.5",
     "prop-types": "^15.7.2",
