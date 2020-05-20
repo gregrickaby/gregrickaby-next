@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import {getBlockData, getFeaturedImage, GetPost} from 'lib/api'
+import {getBlockData, getFeaturedImage, GetPost} from '@/lib/api'
 
 const FeaturedWork = (props) => {
   const blockData = getBlockData(props.data.acf.content_blocks, 'featured_work')

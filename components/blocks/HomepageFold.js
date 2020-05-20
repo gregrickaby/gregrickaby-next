@@ -1,7 +1,7 @@
 import Button from '../common/Button'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
-import {getBlockData} from 'lib/api'
+import {getBlockData} from '@/lib/api'
 
 const HomepageFold = (props) => {
   const blockData = getBlockData(props.data.acf.content_blocks, 'homepage_fold')

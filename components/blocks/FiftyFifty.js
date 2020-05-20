@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import {getBlockData} from 'lib/api'
+import {getBlockData} from '@/lib/api'
 
 const FiftyFifty = (props) => {
   const blockData = getBlockData(

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import PropTypes from 'prop-types'
-import {getTermNames} from 'lib/api'
+import {getTermNames} from '@/lib/api'
 
 const Categories = (props) => (
   <>

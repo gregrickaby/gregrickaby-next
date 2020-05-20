@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import {getBlockData, getFeaturedImage} from 'lib/api'
+import {getBlockData, getFeaturedImage} from '@/lib/api'
 
 const LogoTrain = (props) => {
   // Get the block data for the Logo Train.

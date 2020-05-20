@@ -1,9 +1,9 @@
-import GoBack from 'components/common/GoBack'
-import Hero from 'components/blog/Hero'
-import Layout from 'components/global/Layout'
+import GoBack from '@/components/common/GoBack'
+import Hero from '@/components/blog/Hero'
+import Layout from '@/components/global/Layout'
 import PropTypes from 'prop-types'
-import Tags from 'components/blog/Tags'
-import config from 'lib/config'
+import Tags from '@/components/blog/Tags'
+import config from '@/lib/config'
 
 const Post = ({post}) => (
   <Layout>
