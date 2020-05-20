@@ -1,6 +1,6 @@
-import Categories from '../Categories'
+import Categories from './Categories'
 import Link from 'next/link'
-import PostDate from '../PostDate'
+import PostDate from './PostDate'
 import PropTypes from 'prop-types'
 
 const Hero = ({post}) => (
