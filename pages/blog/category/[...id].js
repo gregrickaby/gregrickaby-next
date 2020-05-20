@@ -24,7 +24,7 @@ const CategoryArchive = ({posts, id}) => {
 
 export async function getServerSideProps(context) {
   const id = context.query.id[0]
-  const res = await fetch(`${config.apiUrl}posts?categories=${id}`)
+  const res = await fetch(`${config.apiUrl}posts?categories=${id}`) // eslint-disable-line no-undef
   const posts = await res.json()
 
   return {

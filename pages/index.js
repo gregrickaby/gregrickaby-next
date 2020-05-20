@@ -33,7 +33,7 @@ const Homepage = ({page}) => (
 )
 
 export async function getStaticProps() {
-  const res = await fetch(`${config.apiUrl}pages/208`)
+  const res = await fetch(`${config.apiUrl}pages/208`) // eslint-disable-line no-undef
   const page = await res.json()
 
   return {

@@ -22,7 +22,7 @@ const Post = ({post}) => (
 
 export async function getServerSideProps(context) {
   const id = context.query.id[1]
-  const res = await fetch(`${config.apiUrl}posts/${id}?_embed`)
+  const res = await fetch(`${config.apiUrl}posts/${id}?_embed`) // eslint-disable-line no-undef
   const post = await res.json()
 
   return {

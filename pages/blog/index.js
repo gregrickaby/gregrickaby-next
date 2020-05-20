@@ -13,7 +13,7 @@ const BlogArchive = ({posts}) => (
 )
 
 export async function getStaticProps() {
-  const res = await fetch(`${config.apiUrl}posts?_embed`)
+  const res = await fetch(`${config.apiUrl}posts?_embed`) // eslint-disable-line no-undef
   const posts = await res.json()
 
   return {

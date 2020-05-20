@@ -24,7 +24,7 @@ const TagArchive = ({posts, id}) => {
 
 export async function getServerSideProps(context) {
   const id = context.query.id[0]
-  const res = await fetch(`${config.apiUrl}posts?tags=${id}`)
+  const res = await fetch(`${config.apiUrl}posts?tags=${id}`) // eslint-disable-line no-undef
   const posts = await res.json()
 
   return {
