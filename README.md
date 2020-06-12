@@ -1,4 +1,4 @@
-## NextJS + WordPress
+## NextJS + WordPress (experimental)
 
 **Demo https://nextjs-wordpress-indol.now.sh/**
 
