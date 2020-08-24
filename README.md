@@ -1,4 +1,10 @@
-## NextJS + WordPress (experimental)
+# This project has been archived.
+
+I teamed up with the dev team at Vercel create an [official Next.js WordPress Example](https://github.com/vercel/next.js/tree/canary/examples/cms-wordpress).
+
+If you'd like to know more about the project, check out the [blog post](https://webdevstudios.com/2020/06/02/building-the-nextjs-9-4-wordpress-example/).
+
+## NextJS + WordPress
 
 **Demo https://nextjs-wordpress-indol.now.sh/**
 
