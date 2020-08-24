@@ -4,7 +4,9 @@ I teamed up with the dev team at Vercel create an [official Next.js WordPress Ex
 
 If you'd like to know more about the project, check out the [blog post](https://webdevstudios.com/2020/06/02/building-the-nextjs-9-4-wordpress-example/).
 
-## NextJS + WordPress
+---
+
+## NextJS + WordPress (no longer supported)
 
 **Demo https://nextjs-wordpress-indol.now.sh/**
 
